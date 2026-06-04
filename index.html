@@ -6,13 +6,8 @@
 <title>客户每日情报中心</title>
 <style>
   :root {
-    --bg: #f5f6f8;
-    --card: #ffffff;
-    --text: #1a1a2e;
-    --sub: #6b7280;
-    --accent: #2563eb;
-    --accent-light: #eff6ff;
-    --border: #e5e7eb;
+    --bg: #f5f6f8; --card: #ffffff; --text: #1a1a2e; --sub: #6b7280;
+    --accent: #2563eb; --accent-light: #eff6ff; --border: #e5e7eb;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html, body { height:100%; }
@@ -25,8 +20,17 @@
   .topbar h1 { font-size:18px; font-weight:700; display:flex; align-items:center; gap:10px; }
   .topbar h1 .dot { width:8px; height:8px; border-radius:50%; background:#059669; animation:pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
-  .topbar .meta { font-size:12px; color:var(--sub); }
-  .topbar .meta span { margin-left:16px; }
+  .topbar .meta { font-size:12px; color:var(--sub); display:flex; align-items:center; gap:14px; }
+
+  /* 模式切换标签 */
+  .mode-tabs { display:flex; gap:4px; background:#f3f4f6; border-radius:8px; padding:3px; }
+  .mode-tab {
+    padding:6px 16px; border-radius:6px; font-size:13px; font-weight:500;
+    cursor:pointer; border:none; background:transparent; color:var(--sub);
+    transition:all .15s;
+  }
+  .mode-tab.active { background:#fff; color:var(--accent); font-weight:600; box-shadow:0 1px 2px rgba(0,0,0,.06); }
+  .mode-tab:hover:not(.active) { color:var(--text); }
 
   .layout { display:flex; height:calc(100vh - 56px); }
   
@@ -48,10 +52,7 @@
     color:var(--text); user-select:none; transition:background .12s;
   }
   .month-toggle:hover { background:#f9fafb; }
-  .month-toggle .arrow {
-    width:16px; height:16px; display:flex; align-items:center; justify-content:center;
-    transition:transform .2s; font-size:10px; color:var(--sub);
-  }
+  .month-toggle .arrow { width:16px; height:16px; display:flex; align-items:center; justify-content:center; transition:transform .2s; font-size:10px; color:var(--sub); }
   .month-toggle .arrow.open { transform:rotate(90deg); }
   .month-toggle .count { font-size:11px; color:var(--sub); font-weight:400; margin-left:auto; }
   .month-days { overflow:hidden; transition:max-height .3s ease; }
@@ -67,12 +68,18 @@
   .date-item .wd { font-size:11px; color:var(--sub); margin-left:6px; }
   .date-item:hover .wd { color:var(--accent); }
   .date-item.active .wd { color:rgba(255,255,255,.75); }
-  .date-item .badge {
-    position:absolute; right:10px; top:50%; transform:translateY(-50%);
-    font-size:10px; padding:1px 7px; border-radius:8px;
-    background:#ecfdf5; color:#059669;
-  }
+  .date-item .badge { position:absolute; right:10px; top:50%; transform:translateY(-50%); font-size:10px; padding:1px 7px; border-radius:8px; background:#ecfdf5; color:#059669; }
   .date-item.active .badge { background:rgba(255,255,255,.25); color:#fff; }
+
+  /* 月度分析入口 */
+  .monthly-entry {
+    display:block; margin:10px 0 4px; padding:10px 14px; border-radius:8px;
+    font-size:13px; font-weight:600; cursor:pointer; text-decoration:none;
+    color:var(--accent); background:var(--accent-light); border:1px solid #bfdbfe;
+    transition:all .15s; text-align:center;
+  }
+  .monthly-entry:hover { background:#dbeafe; }
+  .monthly-entry .icon { margin-right:4px; }
 
   /* 右侧内容 */
   .main { flex:1; overflow:hidden; display:flex; flex-direction:column; }
@@ -84,9 +91,7 @@
   .main .date-header .live { width:6px; height:6px; border-radius:50%; background:#059669; }
   .main iframe { flex:1; width:100%; border:none; background:#fff; }
   
-  .empty-state { 
-    flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--sub);
-  }
+  .empty-state { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--sub); }
   .empty-state .icon { font-size:48px; margin-bottom:16px; }
   .empty-state p { font-size:14px; }
 
@@ -102,24 +107,51 @@
 <div class="topbar">
   <h1><span class="dot"></span>客户每日情报中心</h1>
   <div class="meta">
-    客户：<strong>17</strong> 家
+    <div class="mode-tabs">
+      <button class="mode-tab active" onclick="switchMode('daily')" id="tabDaily">📰 每日情报</button>
+      <button class="mode-tab" onclick="switchMode('monthly')" id="tabMonthly">📊 月度分析</button>
+    </div>
+    <span>客户：<strong>17</strong> 家</span>
     <span>当前：<strong id="currentDate">--</strong></span>
   </div>
 </div>
 
 <div class="layout">
 
-  <nav class="sidebar">
+  <nav class="sidebar" id="sidebarDaily">
     <div class="sidebar-header">
       <h3>📅 情报日历</h3>
       <div class="stat" id="dateCount">共 0 份报告</div>
     </div>
     <div class="sidebar-scroll" id="dateList"></div>
+    <div class="sidebar-scroll" style="border-top:1px solid var(--border);padding-top:10px;">
+      <a class="monthly-entry" href="javascript:void(0)" onclick="switchMode('monthly');loadReport('2026-05','monthly')">
+        <span class="icon">📊</span> 查看 5 月月度分析
+      </a>
+    </div>
+  </nav>
+
+  <nav class="sidebar" id="sidebarMonthly" style="display:none;">
+    <div class="sidebar-header">
+      <h3>📊 月度分析报告</h3>
+      <div class="stat">按月份汇总分析</div>
+    </div>
+    <div class="sidebar-scroll">
+      <a class="date-item active" href="javascript:void(0)" onclick="loadReport('2026-05','monthly')" id="monthly-2026-05">
+        2026年5月<span class="wd">11个情报日</span>
+        <span class="badge">最新</span>
+      </a>
+    </div>
+    <div class="sidebar-scroll" style="border-top:1px solid var(--border);padding-top:10px;">
+      <a class="monthly-entry" href="javascript:void(0)" onclick="switchMode('daily')">
+        <span class="icon">📰</span> 返回每日情报
+      </a>
+    </div>
   </nav>
 
   <main class="main" id="mainArea">
     <div class="date-header" id="dateHeader">
-      <span class="live"></span> 请从左侧日历选择日期
+      <span class="live"></span> 请从左侧选择
     </div>
     <div class="empty-state" id="emptyState">
       <div class="icon">📊</div>
@@ -132,17 +164,30 @@
 
 <script>
 var REPORTS = ["2026-06-04","2026-06-03","2026-06-02","2026-06-01","2026-05-29","2026-05-28","2026-05-27","2026-05-26","2026-05-25","2026-05-21","2026-05-20","2026-05-19","2026-05-18","2026-05-12","2026-05-11"];
+var currentMode = 'daily';
 
 (function() {
   renderCalendar();
-  if (REPORTS.length > 0) loadReport(REPORTS[0]);
+  if (REPORTS.length > 0) loadReport(REPORTS[0], 'daily');
 })();
+
+function switchMode(mode) {
+  currentMode = mode;
+  document.getElementById('sidebarDaily').style.display = mode === 'daily' ? '' : 'none';
+  document.getElementById('sidebarMonthly').style.display = mode === 'monthly' ? '' : 'none';
+  document.getElementById('tabDaily').classList.toggle('active', mode === 'daily');
+  document.getElementById('tabMonthly').classList.toggle('active', mode === 'monthly');
+  if (mode === 'daily' && REPORTS.length > 0) {
+    loadReport(REPORTS[0], 'daily');
+  } else if (mode === 'monthly') {
+    loadReport('2026-05', 'monthly');
+  }
+}
 
 function renderCalendar() {
   var container = document.getElementById('dateList');
   document.getElementById('dateCount').textContent = '共 ' + REPORTS.length + ' 份报告';
   
-  // 按月份分组
   var months = {};
   REPORTS.forEach(function(d) {
     var m = d.slice(0, 7);
@@ -160,7 +205,7 @@ function renderCalendar() {
     var days = months[m];
     var mName = monthNames[m.slice(5,7)] || m;
     var isLatest = m === now;
-    var collapsed = !isLatest && mi > 0; // 仅最新月份展开
+    var collapsed = !isLatest;
     
     html += '<div class="month-group">';
     html += '<div class="month-toggle" onclick="toggleMonth(this)" data-month="' + m + '">';
@@ -169,18 +214,15 @@ function renderCalendar() {
     html += '<span class="count">' + days.length + ' 份</span>';
     html += '</div>';
     
-    // 计算该月份日期列表的高度
-    var dayHeight = 36; // 每个日期项大约高度
-    var maxH = collapsed ? 'max-height:0' : 'max-height:' + (days.length * dayHeight + 8) + 'px';
+    var maxH = collapsed ? 'max-height:0' : 'max-height:' + (days.length * 36 + 8) + 'px';
     html += '<div class="month-days' + (collapsed ? ' collapsed' : '') + '" style="' + maxH + '">';
     
     days.forEach(function(d) {
       var date = new Date(d + 'T00:00:00+08:00');
       var wd = ['周日','周一','周二','周三','周四','周五','周六'][date.getDay()];
-      var dayNum = d.slice(8);
       var isNew = d === REPORTS[0];
-      html += '<a class="date-item" href="javascript:void(0)" data-date="' + d + '" onclick="loadReport(\'' + d + '\')">';
-      html += dayNum + '日<span class="wd">' + wd + '</span>';
+      html += '<a class="date-item" href="javascript:void(0)" data-date="' + d + '" onclick="loadReport(\'' + d + '\',\'daily\')">';
+      html += d.slice(8) + '日<span class="wd">' + wd + '</span>';
       if (isNew) html += '<span class="badge">最新</span>';
       html += '</a>';
     });
@@ -195,34 +237,41 @@ function toggleMonth(el) {
   var arrow = el.querySelector('.arrow');
   var days = el.nextElementSibling;
   var isOpen = !days.classList.contains('collapsed');
-  
   if (isOpen) {
     days.classList.add('collapsed');
     arrow.classList.remove('open');
   } else {
     days.classList.remove('collapsed');
     arrow.classList.add('open');
-    // 动态设置展开高度
     var items = days.querySelectorAll('.date-item');
     days.style.maxHeight = (items.length * 36 + 8) + 'px';
   }
 }
 
-function loadReport(date) {
-  var items = document.querySelectorAll('.date-item');
-  for (var i=0; i<items.length; i++) items[i].classList.remove('active');
-  var target = document.querySelector('[data-date="' + date + '"]');
-  if (target) target.classList.add('active');
+function loadReport(id, mode) {
+  mode = mode || currentMode;
+  
+  // 高亮
+  if (mode === 'daily') {
+    document.querySelectorAll('#sidebarDaily .date-item').forEach(function(el) { el.classList.remove('active'); });
+    var target = document.querySelector('#sidebarDaily [data-date="' + id + '"]');
+    if (target) target.classList.add('active');
+  } else {
+    document.querySelectorAll('#sidebarMonthly .date-item').forEach(function(el) { el.classList.remove('active'); });
+    var target = document.getElementById('monthly-' + id);
+    if (target) target.classList.add('active');
+  }
 
-  document.getElementById('currentDate').textContent = date;
-  document.getElementById('dateHeader').innerHTML = '<span class="live"></span> 📅 ' + date + ' 情报报告';
+  document.getElementById('currentDate').textContent = id;
   
-  var empty = document.getElementById('emptyState');
+  var url = mode === 'daily' ? ('./' + id + '/客户每日情报.html') : ('./monthly/' + id + '/月度分析.html');
+  document.getElementById('dateHeader').innerHTML = '<span class="live"></span> ' + 
+    (mode === 'daily' ? '📅 ' + id + ' 情报报告' : '📊 ' + id + ' 月度分析报告');
+  
+  document.getElementById('emptyState').style.display = 'none';
   var frame = document.getElementById('reportFrame');
-  
-  empty.style.display = 'none';
   frame.style.display = 'block';
-  frame.src = './' + date + '/客户每日情报.html';
+  frame.src = url;
 }
 </script>
 </body>

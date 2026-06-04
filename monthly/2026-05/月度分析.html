@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>月度分析 - 2026年5月</title>
+<style>
+  :root { --bg:#f5f6f8; --card:#fff; --text:#1a1a2e; --sub:#6b7280; --accent:#2563eb; --border:#e5e7eb; --high:#059669; --mid:#d97706; --low:#6b7280; --red:#dc2626; --purple:#7c3aed; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background:var(--bg); color:var(--text); line-height:1.65; margin:0; padding:24px 28px; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  .subtitle { color:var(--sub); font-size:13px; margin-bottom:24px; }
+
+  /* 概览卡片 */
+  .kpi-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:28px; }
+  .kpi-card { background:var(--card); border-radius:10px; padding:18px 20px; border:1px solid var(--border); text-align:center; }
+  .kpi-card .num { font-size:28px; font-weight:800; }
+  .kpi-card .label { font-size:12px; color:var(--sub); margin-top:4px; }
+  .kpi-card.green .num { color:var(--high); }
+  .kpi-card.blue .num { color:var(--accent); }
+  .kpi-card.red .num { color:var(--red); }
+  .kpi-card.purple .num { color:var(--purple); }
+
+  /* 产品矩阵表 */
+  table { width:100%; border-collapse:collapse; background:var(--card); border-radius:10px; overflow:hidden; border:1px solid var(--border); margin-bottom:28px; font-size:13px; }
+  th { background:#f8f9fb; padding:12px 14px; text-align:left; font-weight:600; font-size:12px; color:var(--sub); text-transform:uppercase; letter-spacing:.5px; border-bottom:2px solid var(--border); }
+  td { padding:11px 14px; border-bottom:1px solid #f3f4f6; }
+  tr:last-child td { border-bottom:none; }
+  .tag { display:inline-block; padding:2px 10px; border-radius:12px; font-size:11px; font-weight:600; }
+  .tag.high { background:#ecfdf5; color:var(--high); }
+  .tag.mid { background:#fffbeb; color:var(--mid); }
+  .tag.urgent { background:#fef2f2; color:var(--red); }
+
+  /* 客户卡片 */
+  .client-card { background:var(--card); border-radius:10px; padding:22px 24px; border:1px solid var(--border); margin-bottom:18px; }
+  .client-card h3 { font-size:16px; margin:0 0 12px; display:flex; align-items:center; gap:10px; }
+  .client-card h3 .pri { font-size:11px; padding:3px 10px; border-radius:12px; }
+  .client-card .section { margin-top:14px; }
+  .client-card .section h4 { font-size:12px; color:var(--sub); margin:0 0 6px; text-transform:uppercase; letter-spacing:.5px; }
+  .client-card .section p, .client-card .section li { font-size:13px; }
+  .client-card ul { margin:0; padding-left:18px; }
+  .client-card li { margin-bottom:4px; }
+
+  .product-tags { display:flex; flex-wrap:wrap; gap:6px; }
+  .product-tag { padding:4px 12px; border-radius:6px; font-size:12px; font-weight:500; background:var(--accent-light); color:var(--accent); border:1px solid #bfdbfe; }
+  .product-tag.main { background:#dbeafe; font-weight:600; }
+
+  .strategy-box { background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px 16px; font-size:13px; }
+  .strategy-box strong { color:var(--mid); }
+
+  @media (max-width:768px) {
+    body { padding:16px; }
+    .kpi-row { grid-template-columns:repeat(2,1fr); }
+    table { font-size:11px; }
+    th, td { padding:8px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>📊 2026年5月 · 客户月度情报分析</h1>
+<p class="subtitle">报告周期：2026-05-11 ~ 2026-05-31 ｜ 覆盖 17 家重点客户 ｜ 情报日 11 天</p>
+
+<!-- ════ KPI 概览 ════ -->
+<div class="kpi-row">
+  <div class="kpi-card green">
+    <div class="num">7</div>
+    <div class="label">家有重大招聘信号</div>
+  </div>
+  <div class="kpi-card blue">
+    <div class="num">5</div>
+    <div class="label">家发布Q1/Q2财报（均增长）</div>
+  </div>
+  <div class="kpi-card red">
+    <div class="num">3</div>
+    <div class="label">家发生高管/组织变动</div>
+  </div>
+  <div class="kpi-card purple">
+    <div class="num">4</div>
+    <div class="label">家有新工厂/产线扩张</div>
+  </div>
+</div>
+
+<!-- ════ 产品匹配矩阵 ════ -->
+<h2 style="font-size:17px;margin-bottom:12px;">🔗 前程无忧产品匹配矩阵</h2>
+<table>
+<thead>
+<tr>
+  <th>客户</th>
+  <th>HR关联信号</th>
+  <th>推荐产品</th>
+  <th>匹配度</th>
+  <th>预计客单</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>伊顿</strong></td>
+  <td>Q1业绩超预期→扩产→大规模招聘需求</td>
+  <td><span class="product-tag main">招聘平台</span><span class="product-tag">雇主品牌</span><span class="product-tag">校招方案</span></td>
+  <td><span class="tag high">★★★★★</span></td>
+  <td>50-100万</td>
+</tr>
+<tr>
+  <td><strong>SAP</strong></td>
+  <td>中国峰会+AI战略→高端技术人才需求</td>
+  <td><span class="product-tag main">猎头服务</span><span class="product-tag">AI面试</span><span class="product-tag">雇主品牌</span></td>
+  <td><span class="tag high">★★★★★</span></td>
+  <td>30-80万</td>
+</tr>
+<tr>
+  <td><strong>远景动力</strong></td>
+  <td>新CEO+宜昌二期→大规模制造人才缺口</td>
+  <td><span class="product-tag main">招聘平台</span><span class="product-tag">校招方案</span><span class="product-tag">MAP测评</span></td>
+  <td><span class="tag high">★★★★★</span></td>
+  <td>80-150万</td>
+</tr>
+<tr>
+  <td><strong>欧加隆</strong></td>
+  <td>被收购→组织整合→HR变革管理需求</td>
+  <td><span class="product-tag main">人才盘点</span><span class="product-tag">L+领导力</span><span class="product-tag">HPT高潜</span></td>
+  <td><span class="tag urgent">★★★★★</span></td>
+  <td>40-80万</td>
+</tr>
+<tr>
+  <td><strong>捷普</strong></td>
+  <td>业绩强劲+校招启动+绿色企业品牌</td>
+  <td><span class="product-tag main">校招方案</span><span class="product-tag">招聘平台</span><span class="product-tag">雇主品牌</span></td>
+  <td><span class="tag high">★★★★★</span></td>
+  <td>40-80万</td>
+</tr>
+<tr>
+  <td><strong>皓元医药</strong></td>
+  <td>Q1营收+20%→研发扩编→科研人才招聘</td>
+  <td><span class="product-tag main">招聘平台</span><span class="product-tag">AI面试</span><span class="product-tag">人才盘点</span></td>
+  <td><span class="tag high">★★★★☆</span></td>
+  <td>20-50万</td>
+</tr>
+<tr>
+  <td><strong>3M中国</strong></td>
+  <td>绿色工厂+AI光连接→新能源汽车方向扩招</td>
+  <td><span class="product-tag main">招聘平台</span><span class="product-tag">雇主品牌</span><span class="product-tag">MAP测评</span></td>
+  <td><span class="tag high">★★★★☆</span></td>
+  <td>30-60万</td>
+</tr>
+<tr>
+  <td><strong>振华重工</strong></td>
+  <td>智能产线投产+重吊船下水→工程技术扩招</td>
+  <td><span class="product-tag main">招聘平台</span><span class="product-tag">校招方案</span><span class="product-tag">IQCAT测评</span></td>
+  <td><span class="tag high">★★★★☆</span></td>
+  <td>30-60万</td>
+</tr>
+<tr>
+  <td><strong>赛诺菲</strong></td>
+  <td>新CEO+成都中心启用→组织扩张+人才升级</td>
+  <td><span class="product-tag main">招聘平台</span><span class="product-tag">猎头服务</span><span class="product-tag">HPT高潜</span></td>
+  <td><span class="tag high">★★★★★</span></td>
+  <td>50-100万</td>
+</tr>
+<tr>
+  <td><strong>村田</strong></td>
+  <td>订单暴增38%→扩产→工程师大批量招聘</td>
+  <td><span class="product-tag main">招聘平台</span><span class="product-tag">校招方案</span><span class="product-tag">MAP测评</span></td>
+  <td><span class="tag high">★★★★☆</span></td>
+  <td>30-80万</td>
+</tr>
+<tr>
+  <td><strong>建科咨询集团</strong></td>
+  <td>重大工程推进+新疆办事处→项目制招聘</td>
+  <td><span class="product-tag main">招聘平台</span><span class="product-tag">岗位测评方案</span></td>
+  <td><span class="tag mid">★★★☆☆</span></td>
+  <td>15-30万</td>
+</tr>
+<tr>
+  <td><strong>天正电气</strong></td>
+  <td>光储充新业务→新能源方向人才储备</td>
+  <td><span class="product-tag main">招聘平台</span><span class="product-tag">人才盘点</span></td>
+  <td><span class="tag mid">★★★☆☆</span></td>
+  <td>10-25万</td>
+</tr>
+<tr>
+  <td><strong>罗莱生活</strong></td>
+  <td>净利+20%→零售运营/电商人才需求</td>
+  <td><span class="product-tag main">招聘平台</span><span class="product-tag">量见云课堂</span></td>
+  <td><span class="tag mid">★★★☆☆</span></td>
+  <td>10-20万</td>
+</tr>
+<tr>
+  <td><strong>益科德</strong></td>
+  <td>PMI获奖+多赛道发力→EPC项目人才</td>
+  <td><span class="product-tag main">招聘平台</span><span class="product-tag">MAP测评</span></td>
+  <td><span class="tag mid">★★★☆☆</span></td>
+  <td>10-20万</td>
+</tr>
+<tr>
+  <td><strong>仲利国际</strong></td>
+  <td>中票发行+投诉暴露客服缺口</td>
+  <td><span class="product-tag main">招聘平台</span></td>
+  <td><span class="tag mid">★★☆☆☆</span></td>
+  <td>5-10万</td>
+</tr>
+<tr>
+  <td><strong>建科工程咨询</strong></td>
+  <td>长三角一体化→监理/造价岗位需求</td>
+  <td><span class="product-tag main">招聘平台</span></td>
+  <td><span class="tag mid">★★☆☆☆</span></td>
+  <td>5-15万</td>
+</tr>
+<tr>
+  <td><strong>朗阁教育</strong></td>
+  <td>培训推广活跃→教师/顾问岗位需求稳定</td>
+  <td><span class="product-tag main">招聘平台</span></td>
+  <td><span class="tag low">★★☆☆☆</span></td>
+  <td>3-8万</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ════ 🔥 五月重点关注客户 ════ -->
+<h2 style="font-size:17px;margin-bottom:12px;">🔥 重点关注：五月高价值客户深度分析</h2>
+
+<!-- 远景动力 -->
+<div class="client-card">
+  <h3>🔋 远景动力 <span class="pri tag urgent">P0 · 立即跟进</span></h3>
+  <div class="section">
+    <h4>📰 五月核心动态</h4>
+    <ul>
+      <li>原荣耀副董事长万飚出任全球CEO，同时担任远景科技集团执行董事+CTO</li>
+      <li>宜昌超级工厂二期开工（总投资242亿，一期40GWh），规划总产能120GWh</li>
+      <li>2026年2月储能集成商中标市场份额13.7%，排名第一</li>
+      <li>ESIE 2026储能展发布多款新品，全球14大基地布局中</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>💡 人力资源价值点</h4>
+    <ul>
+      <li><strong>大规模招聘需求：</strong>宜昌二期2027投产前需要数千名制造工程师、电芯工艺师、设备工程师</li>
+      <li><strong>新CEO上任：</strong>来自荣耀的高管可能带来人才策略变化，华为系管理文化渗透，对HR服务有新需求</li>
+      <li><strong>校园招聘机会：</strong>14个基地+快速扩张，校招批量需求显著</li>
+      <li><strong>测评需求：</strong>制造岗位基数大，MAP职业性格测验适合产线管理岗筛选</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>🔗 前程无忧产品匹配</h4>
+    <div class="product-tags">
+      <span class="product-tag main">招聘平台 · 年度套餐</span>
+      <span class="product-tag">校招测评方案</span>
+      <span class="product-tag">MAP职业性格测验</span>
+      <span class="product-tag">人才盘点方案</span>
+      <span class="product-tag">雇主品牌方案</span>
+    </div>
+  </div>
+  <div class="section">
+    <h4>🎯 销售跟进策略</h4>
+    <div class="strategy-box">
+      <strong>切入时机：</strong>CEO刚上任，正是供应商洗牌窗口。<br>
+      <strong>切入点：</strong>以"宜昌基地大规模招聘解决方案"为话题，组合招聘平台+校招+测评打包提案。<br>
+      <strong>关键话术：</strong>"远景14个基地的快速扩张需要一套标准化人才筛选体系，前程无忧的MAP测评+校招方案能帮你们在宜昌快速搭建人才梯队。"<br>
+      <strong>跟进节奏：</strong>本周内电话联系HRD，预约下周拜访。优先级P0。
+    </div>
+  </div>
+</div>
+
+<!-- 欧加隆（被收购） -->
+<div class="client-card">
+  <h3>💊 欧加隆 <span class="pri tag urgent">P0 · 紧急跟进</span></h3>
+  <div class="section">
+    <h4>📰 五月核心动态</h4>
+    <ul>
+      <li><strong>重磅：</strong>印度太阳制药（Sun Pharma）以117.5亿美元全现金收购欧加隆</li>
+      <li>若完成将成为印度制药公司史上最大海外并购</li>
+      <li>欧加隆原为默沙东拆分独立，专注女性健康领域</li>
+      <li>中国市场总部位于上海，拥有痛风管理等零售渠道战略布局</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>💡 人力资源价值点</h4>
+    <ul>
+      <li><strong>收购整合期：</strong>组织架构调整、人员优化/重新配置，HR咨询需求爆发</li>
+      <li><strong>人才盘点刚需：</strong>收购方需要评估现有人才库，人才盘点方案直接切入</li>
+      <li><strong>高潜人才识别：</strong>整合期需要保留核心人才，HPT高潜测评是刚需</li>
+      <li><strong>领导力评估：</strong>新老管理团队融合，L+领导力测评价值凸显</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>🔗 前程无忧产品匹配</h4>
+    <div class="product-tags">
+      <span class="product-tag main">人才盘点方案 ★首选</span>
+      <span class="product-tag">HPT高潜人才测评</span>
+      <span class="product-tag">L+领导力测评</span>
+      <span class="product-tag">MAP职业性格测验</span>
+      <span class="product-tag">招聘平台</span>
+    </div>
+  </div>
+  <div class="section">
+    <h4>🎯 销售跟进策略</h4>
+    <div class="strategy-box">
+      <strong>切入时机：</strong>收购消息刚出，HR部门正处于"被评估"的焦虑期，此时提供专业支持建立信任。<br>
+      <strong>切入点：</strong>"并购整合期的人才盘点与保留方案"——以人才盘点为龙头，带动测评全线产品。<br>
+      <strong>关键话术：</strong>"太阳制药收购后必然要进行人才审计，前程无忧的人才盘点+高潜测评组合能帮你们向新东家展现团队价值。"<br>
+      <strong>注意：</strong>敏感时期不要公开讨论"裁员"，聚焦"人才保留"和"组织优化"。优先级P0，立即行动。
+    </div>
+  </div>
+</div>
+
+<!-- 伊顿 -->
+<div class="client-card">
+  <h3>⚡ 伊顿（中国） <span class="pri tag high">P1 · 重点跟进</span></h3>
+  <div class="section">
+    <h4>📰 五月核心动态</h4>
+    <ul>
+      <li>Q1销售额75亿美元，同比+17%，有机增长10%，超预期</li>
+      <li>上调全年业绩预期，增长动能强劲</li>
+      <li>常州工厂工业4.0标杆，亚太总部设在上海</li>
+      <li>低压电气中国行活动覆盖多个城市</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>💡 人力资源价值点</h4>
+    <ul>
+      <li>业绩超预期→扩产→招聘需求持续放大</li>
+      <li>工业4.0转型→智能制造工程师、数据分析师需求增长</li>
+      <li>亚太总部在上海→管理培训生、高端岗位猎头机会</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>🔗 产品匹配</h4>
+    <div class="product-tags">
+      <span class="product-tag main">招聘平台</span>
+      <span class="product-tag">雇主品牌方案</span>
+      <span class="product-tag">校招测评方案</span>
+      <span class="product-tag">猎头服务</span>
+    </div>
+  </div>
+  <div class="section">
+    <h4>🎯 跟进策略</h4>
+    <div class="strategy-box">
+      <strong>切入点：</strong>Q1财报利好，正好谈年度招聘计划升级。"业绩增长17%，人才储备需要跟得上。"<br>
+      <strong>组合打法：</strong>招聘平台年度套餐 + 雇主品牌升级（趁势打造"智能动力管理最佳雇主"形象）。优先级P1。
+    </div>
+  </div>
+</div>
+
+<!-- SAP -->
+<div class="client-card">
+  <h3>☁️ 思爱普 SAP <span class="pri tag high">P1 · 重点跟进</span></h3>
+  <div class="section">
+    <h4>📰 五月核心动态</h4>
+    <ul>
+      <li>Sapphire 2026大会宣布与英伟达扩大合作，嵌入AI运行时</li>
+      <li>6月3-4日北京举办2026中国峰会，发布"自主运营企业"战略</li>
+      <li>5月收购Prior Labs建立AI研究实验室</li>
+      <li>股价回调至190美元（RSI 73显示超买后回调）</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>💡 人力资源价值点</h4>
+    <ul>
+      <li>AI战略升级→对AI/ML工程师、数据科学家招聘需求激增</li>
+      <li>中国峰会6月举办→品牌曝光窗口，雇主品牌方案恰逢其时</li>
+      <li>"自主运营企业"战略需要高端咨询人才，猎头服务机会</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>🔗 产品匹配</h4>
+    <div class="product-tags">
+      <span class="product-tag main">猎头服务</span>
+      <span class="product-tag">AI智能面试</span>
+      <span class="product-tag">雇主品牌方案</span>
+      <span class="product-tag">招聘平台</span>
+    </div>
+  </div>
+  <div class="section">
+    <h4>🎯 跟进策略</h4>
+    <div class="strategy-box">
+      <strong>切入点：</strong>中国峰会刚结束（6/4），正是话题热点。"SAP的自主运营企业战略需要什么样的人才？我们的AI面试产品能帮你们高效筛选。"<br>
+      <strong>差异化：</strong>SAP自己是HR软件公司，招聘平台非其主要竞争领域，但猎头和测评是互补机会。优先级P1。
+    </div>
+  </div>
+</div>
+
+<!-- 赛诺菲 -->
+<div class="client-card">
+  <h3>💉 赛诺菲 <span class="pri tag high">P1 · 重点跟进</span></h3>
+  <div class="section">
+    <h4>📰 五月核心动态</h4>
+    <ul>
+      <li>2月新CEO葛丽鹤上任，3月成都创新与运营中心启用</li>
+      <li>Q1营收105亿欧元+13.6%，Dupixent 42亿欧+30.8%</li>
+      <li>连续六年获"中国杰出雇主"榜首</li>
+      <li>4月Q1财报后积极BD，与中国生物制药全球合作</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>💡 人力资源价值点</h4>
+    <ul>
+      <li>成都中心启用→西部大规模扩招（运营、临床、市场）</li>
+      <li>"杰出雇主"品牌敏感→雇主品牌方案切入自然</li>
+      <li>新CEO+新战略→可能存在组织调整和人才升级需求</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>🔗 产品匹配</h4>
+    <div class="product-tags">
+      <span class="product-tag main">招聘平台</span>
+      <span class="product-tag">猎头服务</span>
+      <span class="product-tag">HPT高潜人才测评</span>
+      <span class="product-tag">雇主品牌方案</span>
+    </div>
+  </div>
+  <div class="section">
+    <h4>🎯 跟进策略</h4>
+    <div class="strategy-box">
+      <strong>切入点：</strong>"成都中心启用后的人才战略"——以地域扩张为话题，谈招聘+测评一体化方案。<br>
+      <strong>优势：</strong>赛诺菲是新增客户（6月刚加入），关系从零开始，可以借"杰出雇主"连续获奖的契机表达合作意愿。优先级P1。
+    </div>
+  </div>
+</div>
+
+<!-- 振华重工 -->
+<div class="client-card">
+  <h3>🏗️ 振华重工 <span class="pri tag high">P2 · 常规跟进</span></h3>
+  <div class="section">
+    <h4>📰 五月核心动态</h4>
+    <ul>
+      <li>5月28日全球首创集装箱吊具智能产线在沪投产</li>
+      <li>5月18日38000吨多用途重吊船下水</li>
+      <li>多项QC成果获中交集团2026年度奖项</li>
+      <li>6月3日多项专利获批（起重机、电缆槽等）</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>💡 人力资源价值点</h4>
+    <ul>
+      <li>智能制造转型→对自动化工程师、工业机器人运维需求增长</li>
+      <li>重吊船等新品→船舶设计、电气工程等专业人才缺口</li>
+      <li>中交集团体系→可能有集团级HR采购机会</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>🔗 产品匹配</h4>
+    <div class="product-tags">
+      <span class="product-tag main">招聘平台</span>
+      <span class="product-tag">校招测评方案</span>
+      <span class="product-tag">IQCAT认知能力测验</span>
+    </div>
+  </div>
+  <div class="section">
+    <h4>🎯 跟进策略</h4>
+    <div class="strategy-box">
+      <strong>切入点：</strong>智能产线投产后需要新技能人才，以"智能制造人才招聘方案"为话题。<br>
+      <strong>进阶机会：</strong>探索中交集团层面的框架协议可能性。优先级P2。
+    </div>
+  </div>
+</div>
+
+<!-- 捷普 -->
+<div class="client-card">
+  <h3>🏭 捷普科技 <span class="pri tag high">P1 · 重点跟进</span></h3>
+  <div class="section">
+    <h4>📰 五月核心动态</h4>
+    <ul>
+      <li>FY2026 Q1营收83亿美元+18.74%，超分析师预期</li>
+      <li>入选2026《新闻周刊》"美国最具绿色影响力企业"</li>
+      <li>2026校园招聘全面启动，覆盖AI云数据中心、医疗、机器人</li>
+      <li>3月发布Q2财报，持续增长</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>💡 人力资源价值点</h4>
+    <ul>
+      <li>校招已启动→校招测评方案直接销售窗口打开</li>
+      <li>AI云数据中心方向→新兴领域技术人才需求</li>
+      <li>绿色企业品牌→雇主品牌升级机会</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h4>🔗 产品匹配</h4>
+    <div class="product-tags">
+      <span class="product-tag main">校招测评方案 ★最佳窗口</span>
+      <span class="product-tag">招聘平台</span>
+      <span class="product-tag">雇主品牌方案</span>
+      <span class="product-tag">AI智能面试</span>
+    </div>
+  </div>
+  <div class="section">
+    <h4>🎯 跟进策略</h4>
+    <div class="strategy-box">
+      <strong>切入时机：</strong>校招季就是现在！捷普校招已启动，校招测评方案是最佳切入点。<br>
+      <strong>关键话术：</strong>"捷普今年校招覆盖AI和机器人方向，传统的笔试筛选效率太低，前程无忧的校招测评方案能在48小时内完成千人初筛。"优先级P1，现在就联系。
+    </div>
+  </div>
+</div>
+
+<!-- ════ 行动清单 ════ -->
+<h2 style="font-size:17px;margin-bottom:12px;">📋 五月行动清单</h2>
+<table>
+<thead><tr><th style="width:40px;">#</th><th>行动项</th><th>目标客户</th><th>推荐产品</th><th>优先级</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>CEO更换+宜昌扩产，立即联系HRD</td><td>远景动力</td><td>招聘+校招+MAP</td><td><span class="tag urgent">P0</span></td></tr>
+<tr><td>2</td><td>收购整合期人才盘点方案</td><td>欧加隆</td><td>人才盘点+HPT+L+</td><td><span class="tag urgent">P0</span></td></tr>
+<tr><td>3</td><td>校招季切入测评方案</td><td>捷普</td><td>校招测评方案</td><td><span class="tag high">P1</span></td></tr>
+<tr><td>4</td><td>中国峰会结束跟进+AI面试提案</td><td>SAP</td><td>猎头+AI面试+雇主品牌</td><td><span class="tag high">P1</span></td></tr>
+<tr><td>5</td><td>成都中心启用+杰出雇主合作</td><td>赛诺菲</td><td>招聘+猎头+HPT</td><td><span class="tag high">P1</span></td></tr>
+<tr><td>6</td><td>Q1业绩增长→年度招聘方案升级</td><td>伊顿</td><td>招聘+雇主品牌+校招</td><td><span class="tag high">P1</span></td></tr>
+<tr><td>7</td><td>智能产线投产→新技能人才招聘</td><td>振华重工</td><td>招聘+校招+IQCAT</td><td><span class="tag mid">P2</span></td></tr>
+<tr><td>8</td><td>订单暴增→扩产招聘方案</td><td>村田</td><td>招聘+校招+MAP</td><td><span class="tag mid">P2</span></td></tr>
+</tbody>
+</table>
+
+<p style="text-align:center;color:var(--sub);font-size:12px;margin-top:32px;">
+📊 月度分析由小余自动生成于 2026-06-04 ｜ 数据来源：11个情报日 × 17家客户
+</p>
+
+</body>
+</html>
