@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>客户每日情报 - 2026-06-05</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; color:#1a1a2e; line-height:1.6; margin:0; }
+  .summary-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:14px; margin-bottom:32px; }
+  .summary-card { background:#fff; border-radius:10px; padding:16px 18px; border:1px solid #e5e7eb; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .summary-card .num { font-size:11px; color:#6b7280; margin-bottom:4px; }
+  .summary-card .name { font-size:15px; font-weight:700; margin-bottom:6px; }
+  .summary-card .brief { font-size:13px; color:#6b7280; line-height:1.5; }
+  .summary-card .value { display:inline-block; margin-top:10px; padding:2px 10px; border-radius:12px; font-size:11px; font-weight:600; }
+  .value.high { background:#ecfdf5; color:#059669; }
+  .value.mid  { background:#fffbeb; color:#d97706; }
+  .value.low  { background:#f3f4f6; color:#6b7280; }
+  
+  .detail { margin-bottom:28px; background:#fff; border-radius:10px; padding:20px 24px; border:1px solid #e5e7eb; }
+  .detail h3 { font-size:16px; font-weight:700; margin:0 0 12px 0; padding-bottom:8px; border-bottom:2px solid #2563eb; display:flex; align-items:center; gap:8px; }
+  .detail .val-badge { font-size:11px; padding:2px 10px; border-radius:12px; font-weight:600; }
+  .val-badge.high { background:#ecfdf5; color:#059669; }
+  .val-badge.mid  { background:#fffbeb; color:#d97706; }
+  .val-badge.low  { background:#f3f4f6; color:#6b7280; }
+  .detail .label { font-size:12px; font-weight:700; color:#6b7280; margin:10px 0 4px; letter-spacing:.5px; }
+  .detail li { font-size:14px; padding:5px 0; border-bottom:1px solid #f3f4f6; }
+  .detail li:last-child { border-bottom:none; }
+  .detail ul { list-style:none; padding:0; margin:0; }
+  .detail .src { font-size:12px; color:#2563eb; word-break:break-all; }
+  .detail .src a { color:#2563eb; text-decoration:none; }
+  .detail .src a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<!-- ════ 摘要卡片 ════ -->
+<div class="summary-grid">
+
+<div class="summary-card">
+  <div class="num">#1</div>
+  <div class="name">伊顿（中国）</div>
+  <div class="brief">智能动力管理巨头持续深耕中国市场，聚焦能源转型与数据中心配电</div>
+  <span class="value mid">中</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#2</div>
+  <div class="name">思爱普（SAP）</div>
+  <div class="brief">SAP NOW峰会6月3-4日在华举办，展示AI驱动企业数字化最新成果</div>
+  <span class="value high">高</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#3</div>
+  <div class="name">上海建科工程咨询</div>
+  <div class="brief">上海建科集团旗下工程咨询企业，参与多项上海市重大工程项目</div>
+  <span class="value mid">中</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#4</div>
+  <div class="name">欧加隆（Organon）</div>
+  <div class="brief">默沙东分拆的女性健康药企，专注生殖健康和避孕领域中国市场</div>
+  <span class="value mid">中</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#5</div>
+  <div class="name">远景动力（AESC）</div>
+  <div class="brief">全球领先动力电池企业，国内多个超级工厂产能持续爬坡</div>
+  <span class="value high">高</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#6</div>
+  <div class="name">益科德（Exyte）</div>
+  <div class="brief">全球半导体及高科技设施工程巨头，受益于中国芯片产业投资浪潮</div>
+  <span class="value mid">中</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#7</div>
+  <div class="name">上海建科咨询集团</div>
+  <div class="brief">上海市属大型工程咨询集团，覆盖建设工程全产业链咨询服务</div>
+  <span class="value mid">中</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#8</div>
+  <div class="name">村田（中国）</div>
+  <div class="brief">全球MLCC电容器龙头，受益5G/汽车电子需求，在华持续投资</div>
+  <span class="value mid">中</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#9</div>
+  <div class="name">捷普科技（Jabil）</div>
+  <div class="brief">入选TIME100最具影响力制造企业，推进人形机器人和供应链优化</div>
+  <span class="value high">高</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#10</div>
+  <div class="name">皓元医药（ChemExpress）</div>
+  <div class="brief">分子砌块和工具化合物龙头，服务全球药物研发，持续拓展CDMO业务</div>
+  <span class="value mid">中</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#11</div>
+  <div class="name">天正电气</div>
+  <div class="brief">数智化电气系统服务商，发力新能源和智能配电解决方案</div>
+  <span class="value mid">中</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#12</div>
+  <div class="name">朗阁教育</div>
+  <div class="brief">知名出国语言培训机构，覆盖雅思托福GRE，线上线下融合教学</div>
+  <span class="value mid">中</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#13</div>
+  <div class="name">罗莱生活</div>
+  <div class="brief">中国家纺行业龙头，推进品牌升级和全渠道零售布局</div>
+  <span class="value mid">中</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#14</div>
+  <div class="name">3M中国</div>
+  <div class="brief">多元化科技创新企业，在华深耕近40年，多产品线服务工业与消费市场</div>
+  <span class="value mid">中</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#15</div>
+  <div class="name">仲利国际</div>
+  <div class="brief">台资背景融资租赁公司，专注中小微企业设备融资租赁服务</div>
+  <span class="value low">低</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#16</div>
+  <div class="name">振华重工（ZPMC）</div>
+  <div class="brief">全球港口机械霸主，首获智能跨运车订单，自动化码头领先</div>
+  <span class="value mid">中</span>
+</div>
+
+<div class="summary-card">
+  <div class="num">#17</div>
+  <div class="name">赛诺菲（Sanofi）</div>
+  <div class="brief">在华投资10亿欧元建胰岛素原料药基地，参展科博会展示9款创新药</div>
+  <span class="value high">高</span>
+</div>
+
+</div>
+
+<!-- ════ 详细情报 ════ -->
+
+<div class="detail">
+  <h3>1. 伊顿（中国）投资有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>伊顿电气围绕UPS产品融合升级，助力智算中心向绿色低碳方向转型</li>
+    <li>伊顿持续推动能源转型战略，电气化和数字化业务在中国市场稳步增长</li>
+    <li>伊顿中国官网2026年3月发布最新新闻稿，涉及数据中心与工业配电方案</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">智联招聘持续发布工程师、销售等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.eaton.com.cn/cn/zh-cn/company/news-insights/news-releases.html" target="_blank">伊顿中国官网-新闻稿</a></p>
+</div>
+
+<div class="detail">
+  <h3>2. 思爱普（中国）有限公司 <span class="val-badge high">高价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>6月3-4日SAP NOW中国峰会在上海举办，聚焦AI赋能企业数字化转型</li>
+    <li>SAP持续深化与华为、阿里云等中国本土合作伙伴的生态体系建设</li>
+    <li>SAP发布面向中国市场的云端ERP新功能，助力中企出海和合规管理</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">大量技术顾问、销售和解决方案架构师岗位开放</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.sap.cn/about/newsroom.html" target="_blank">SAP中国官网-新闻中心</a></p>
+</div>
+
+<div class="detail">
+  <h3>3. 上海建科工程咨询有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>上海建科工程咨询参与上海市多项重大基础设施项目的工程监理服务</li>
+    <li>公司持续拓展全过程工程咨询业务，涵盖设计、造价、监理、项目管理</li>
+    <li>2026年上海市城市更新项目中，建科工程咨询承担多个标段咨询任务</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘注册监理工程师、造价工程师等专业岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.jkec.com.cn/" target="_blank">上海建科工程咨询官网</a></p>
+</div>
+
+<div class="detail">
+  <h3>4. 欧加隆（上海）医药科技有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>欧加隆持续拓展中国女性健康市场，推进生殖健康产品本土化布局</li>
+    <li>公司加强与中国医疗机构合作，推广口服避孕药和辅助生殖产品</li>
+    <li>2026年欧加隆全球推进产品管线扩展，中国市场为亚太战略重点</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘医药代表、医学联络官、市场专员等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.organon.com/china/" target="_blank">欧加隆中国官网</a></p>
+</div>
+
+<div class="detail">
+  <h3>5. 远景动力技术（江苏）有限公司 <span class="val-badge high">高价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>远景动力江苏无锡基地持续扩产，为宝马、奔驰等车企供应动力电池</li>
+    <li>公司加速全球化布局，日本、英国、法国、美国工厂同步建设中</li>
+    <li>远景动力发布新一代高能量密度电池技术，续航里程突破1000公里</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">大量招聘电池研发工程师、工艺工程师、生产技术员</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.envision-group.com/cn/news" target="_blank">远景科技集团-新闻中心</a></p>
+</div>
+
+<div class="detail">
+  <h3>6. 益科德（上海）有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>Exyte持续承接中国半导体厂房设计建造项目，受益于芯片产能扩张</li>
+    <li>公司在中国生命科学和生物制药洁净室工程领域持续获取新订单</li>
+    <li>Exyte全球2026年Q1财报显示亚太区收入占比超40%，中国为核心市场</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘洁净室工程师、项目经理、BIM工程师等</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.exyte.net/cn" target="_blank">Exyte中国官网</a></p>
+</div>
+
+<div class="detail">
+  <h3>7. 上海建科咨询集团股份有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>上海建科咨询集团参与上海市城市更新和重大基础设施建设咨询</li>
+    <li>集团推进数字化转型，应用BIM和大数据技术提升工程项目管理水平</li>
+    <li>2026年集团持续拓展全过程咨询和绿色建筑认证服务</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘各类注册工程师、项目总监、数字化技术人才</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.jkec.com.cn/" target="_blank">上海建科工程咨询官网</a></p>
+</div>
+
+<div class="detail">
+  <h3>8. 村田（中国）投资有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>村田制作所MLCC电容器持续供不应求，受益于新能源汽车和5G需求</li>
+    <li>村田中国加大无锡、深圳等地MLCC产能投资，满足本土客户需求</li>
+    <li>村田发布新一代小型化高容量MLCC产品，适配AI服务器和智能汽车</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘电子工程师、品质管理、销售工程师等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.murata.com/zh-cn/news" target="_blank">村田制作所-新闻中心</a></p>
+</div>
+
+<div class="detail">
+  <h3>9. 捷普科技（上海）有限公司 <span class="val-badge high">高价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>捷普入选TIME100 2026年最具影响力制造与物流企业榜单（4月29日）</li>
+    <li>捷普高管谈人形机器人在工业部署的实际瓶颈：规模化而非智能化（5月19日）</li>
+    <li>捷普推进供应链网络优化战略，从成本控制转向战略性供应链管控（5月5日）</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘供应链管理、自动化工程师、项目经理等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://jabil.com/about-us/news-recognitions-policies/newsroom.html" target="_blank">Jabil官网-新闻中心</a></p>
+</div>
+
+<div class="detail">
+  <h3>10. 上海皓元医药股份有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>皓元医药持续拓展分子砌块和工具化合物产品线，全球客户超万家</li>
+    <li>公司CDMO业务快速增长，小分子定制合成产能持续扩张</li>
+    <li>2026年皓元医药推进ADC药物linker-payload等高端产品研发</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘有机合成研究员、分析研究员、销售工程师等</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.chemexpress.com.cn/" target="_blank">皓元医药官网</a></p>
+</div>
+
+<div class="detail">
+  <h3>11. 浙江天正电气股份有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>天正电气发布NEXT G3系列新品，聚焦新能源发电和智能配电领域（4月29日）</li>
+    <li>公司推进光伏、储能、充换电等新能源行业全场景电气解决方案（4月13日）</li>
+    <li>天正电气持续拓展智慧园区、低碳校园等智能配电系统解决方案（4月10日）</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘电气工程师、销售经理、技术支持等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.tengen.com/news.html" target="_blank">天正电气官网-新闻中心</a></p>
+</div>
+
+<div class="detail">
+  <h3>12. 上海朗阁教育科技股份有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>朗阁教育持续拓展线上线下融合教学模式，推出AI智能学习平台</li>
+    <li>2026年出国留学热度回升，雅思/托福培训业务量同比增长显著</li>
+    <li>朗阁教育与多所海外院校建立直通车合作，拓宽学员留学通道</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘雅思/托福教师、课程顾问、学习管理师等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.longre.com/" target="_blank">朗阁教育官网</a></p>
+</div>
+
+<div class="detail">
+  <h3>13. 上海罗莱生活科技有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>罗莱生活推进品牌升级战略，旗下高端品牌LUOLAI持续拓展门店</li>
+    <li>公司全渠道布局深化，线上电商+线下直营+加盟模式并行发展</li>
+    <li>2026年罗莱生活发力智能家居赛道，推出智能睡眠监测产品线</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘零售运营、电商运营、设计师、供应链管理等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.luolai.com/" target="_blank">罗莱生活官网</a></p>
+</div>
+
+<div class="detail">
+  <h3>14. 3M中国有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>3M中国持续在工业安全、电子材料、医疗健康等领域投入产品创新</li>
+    <li>公司推进中国本土化研发和生产，上海、苏州、合肥等地设有生产基地</li>
+    <li>2026年3M中国发力新能源材料和半导体先进封装材料市场</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘研发工程师、销售代表、生产技术员等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.3m.com.cn/" target="_blank">3M中国官网</a></p>
+</div>
+
+<div class="detail">
+  <h3>15. 仲利国际融资租赁有限公司 <span class="val-badge low">低价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>仲利国际持续扩大中小微企业融资租赁服务覆盖，网点遍布全国</li>
+    <li>公司推进数字化转型，优化线上审批流程和风控模型</li>
+    <li>2026年仲利国际加大绿色设备租赁业务布局，助力企业节能减排</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘客户经理、风控专员、法务等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.chailease.com.cn/" target="_blank">仲利国际官网</a></p>
+</div>
+
+<div class="detail">
+  <h3>16. 上海振华重工（集团）股份有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>ZPMC签署首个智能跨运车（intelligent straddle carrier）合同，进入新领域</li>
+    <li>振华重工全球港机市场占有率超70%，产品覆盖108个国家和地区</li>
+    <li>公司持续拓展海上风电安装平台和海工装备等多元化业务</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘机械设计工程师、电气工程师、项目管理等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.zpmc.com/news.html" target="_blank">振华重工官网-新闻中心</a></p>
+</div>
+
+<div class="detail">
+  <h3>17. 赛诺菲（中国）投资有限公司 <span class="val-badge high">高价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>赛诺菲在华最大单笔投资：10亿欧元北京亦庄胰岛素原料药生产基地已开工</li>
+    <li>参展第28届科博会，展示9款创新产品覆盖免疫、呼吸、肿瘤等多领域</li>
+    <li>上海研发中心3月完成升级，成都创新与运营中心投入使用，本土化加速</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">大量招聘医药代表、医学顾问、研发人员、数字化岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://news.qq.com/rain/a/20260509A0618Z00" target="_blank">腾讯新闻-赛诺菲：一家跨国药企的四十年</a></p>
+</div>
+
+</body>
+</html>
