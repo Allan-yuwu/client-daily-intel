@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>客户每日情报 - 2026-06-23</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; color:#1a1a2e; line-height:1.6; margin:0; }
+  .summary-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:14px; margin-bottom:32px; }
+  .summary-card { background:#fff; border-radius:10px; padding:16px 18px; border:1px solid #e5e7eb; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .summary-card .num { font-size:11px; color:#6b7280; margin-bottom:4px; }
+  .summary-card .name { font-size:15px; font-weight:700; margin-bottom:6px; }
+  .summary-card .brief { font-size:13px; color:#6b7280; line-height:1.5; }
+  .summary-card .value { display:inline-block; margin-top:10px; padding:2px 10px; border-radius:12px; font-size:11px; font-weight:600; }
+  .value.high { background:#ecfdf5; color:#059669; }
+  .value.mid  { background:#fffbeb; color:#d97706; }
+  .value.low  { background:#f3f4f6; color:#6b7280; }
+
+  .detail { margin-bottom:28px; background:#fff; border-radius:10px; padding:20px 24px; border:1px solid #e5e7eb; }
+  .detail h3 { font-size:16px; font-weight:700; margin:0 0 12px 0; padding-bottom:8px; border-bottom:2px solid #2563eb; display:flex; align-items:center; gap:8px; }
+  .detail .val-badge { font-size:11px; padding:2px 10px; border-radius:12px; font-weight:600; }
+  .val-badge.high { background:#ecfdf5; color:#059669; }
+  .val-badge.mid  { background:#fffbeb; color:#d97706; }
+  .val-badge.low  { background:#f3f4f6; color:#6b7280; }
+  .detail .label { font-size:12px; font-weight:700; color:#6b7280; margin:10px 0 4px; letter-spacing:.5px; }
+  .detail li { font-size:14px; padding:5px 0; border-bottom:1px solid #f3f4f6; }
+  .detail li:last-child { border-bottom:none; }
+  .detail ul { list-style:none; padding:0; margin:0; }
+  .detail .src { font-size:12px; color:#2563eb; word-break:break-all; }
+  .detail .src a { color:#2563eb; text-decoration:none; }
+  .detail .src a:hover { text-decoration:underline; }
+
+  .page-header { background:linear-gradient(135deg,#2563eb,#1d4ed8); color:#fff; padding:28px 32px; margin-bottom:24px; border-radius:10px; }
+  .page-header h2 { margin:0 0 8px; font-size:22px; }
+  .page-header .sub { font-size:13px; opacity:.85; }
+  .page-header .stats { display:flex; gap:24px; margin-top:14px; }
+  .page-header .stat { text-align:center; }
+  .page-header .stat .num { font-size:28px; font-weight:700; }
+  .page-header .stat .lbl { font-size:11px; opacity:.75; margin-top:2px; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h2>📰 客户每日情报 — 2026年6月23日（周二）</h2>
+  <div class="sub">TOP17 重点客户最新动态追踪 | 数据来源：百度新闻、新浪财经、公司官网、新华网等</div>
+  <div class="stats">
+    <div class="stat"><div class="num">17</div><div class="lbl">覆盖客户</div></div>
+    <div class="stat"><div class="num">8</div><div class="lbl">高价值情报</div></div>
+    <div class="stat"><div class="num">7</div><div class="lbl">中价值情报</div></div>
+    <div class="stat"><div class="num">2</div><div class="lbl">低价值情报</div></div>
+  </div>
+</div>
+
+<!-- ════ 摘要卡片 ════ -->
+<div class="summary-grid">
+<div class="summary-card">
+  <div class="num">#1</div>
+  <div class="name">伊顿（中国）</div>
+  <div class="brief">IDCE 2026发布环氧流化绝缘母线，21世纪经济报道深度分析AI数据中心布局</div>
+  <span class="value high">高</span>
+</div>
+<div class="summary-card">
+  <div class="num">#2</div>
+  <div class="name">思爱普 SAP</div>
+  <div class="brief">中国峰会发布“自主运营企业”战略，224个AI智能体嵌入核心业务</div>
+  <span class="value high">高</span>
+</div>
+<div class="summary-card">
+  <div class="num">#3</div>
+  <div class="name">上海建科工程咨询</div>
+  <div class="brief">员工入选东方英才计划，深圳项目处罚需关注</div>
+  <span class="value mid">中</span>
+</div>
+<div class="summary-card">
+  <div class="num">#4</div>
+  <div class="name">欧加隆（上海）</div>
+  <div class="brief">传120亿美元被印度太阳制药洽购，人事与渠道双线调整</div>
+  <span class="value high">高</span>
+</div>
+<div class="summary-card">
+  <div class="num">#5</div>
+  <div class="name">远景动力</div>
+  <div class="brief">传拟赴港IPO集资10-20亿美元，签1.5GWh储能大单</div>
+  <span class="value high">高</span>
+</div>
+<div class="summary-card">
+  <div class="num">#6</div>
+  <div class="name">益科德 Exyte</div>
+  <div class="brief">CEO换帅，获CATL钻石合作伙伴奖，德国获AI数据中心项目</div>
+  <span class="value mid">中</span>
+</div>
+<div class="summary-card">
+  <div class="num">#7</div>
+  <div class="name">上海建科咨询集团</div>
+  <div class="brief">6月29日召开业绩说明会，校园招聘持续推进</div>
+  <span class="value mid">中</span>
+</div>
+<div class="summary-card">
+  <div class="num">#8</div>
+  <div class="name">村田（中国）</div>
+  <div class="brief">备战慕尼黑上海电子展，人形机器人元器件方案亮相</div>
+  <span class="value high">高</span>
+</div>
+<div class="summary-card">
+  <div class="num">#9</div>
+  <div class="name">捷普科技</div>
+  <div class="brief">FY2026核心EPS指引$12.70超预期，美银上调目标价看好AI增长</div>
+  <span class="value high">高</span>
+</div>
+<div class="summary-card">
+  <div class="num">#10</div>
+  <div class="name">皓元医药</div>
+  <div class="brief">6月18日涨停！核心主业增长+ADC赛道布局驱动股价飙升</div>
+  <span class="value high">高</span>
+</div>
+<div class="summary-card">
+  <div class="num">#11</div>
+  <div class="name">天正电气</div>
+  <div class="brief">首次回购5万股，原材料成本承压但积极回购</div>
+  <span class="value mid">中</span>
+</div>
+<div class="summary-card">
+  <div class="num">#12</div>
+  <div class="name">朗阁教育</div>
+  <div class="brief">暑期招生旺季来临，各地校区培训推广持续活跃</div>
+  <span class="value low">低</span>
+</div>
+<div class="summary-card">
+  <div class="num">#13</div>
+  <div class="name">罗莱生活</div>
+  <div class="brief">智慧产业园落地投产，85家机构集中调研</div>
+  <span class="value mid">中</span>
+</div>
+<div class="summary-card">
+  <div class="num">#14</div>
+  <div class="name">3M中国</div>
+  <div class="brief">成交额飙升83%市场关注回升，AI光连接联盟持续扩展</div>
+  <span class="value mid">中</span>
+</div>
+<div class="summary-card">
+  <div class="num">#15</div>
+  <div class="name">仲利国际</div>
+  <div class="brief">荣获校招提名奖和候选人体验大奖，雇主品牌提升</div>
+  <span class="value mid">中</span>
+</div>
+<div class="summary-card">
+  <div class="num">#16</div>
+  <div class="name">振华重工</div>
+  <div class="brief">独立董事辞任，召开年度股东大会，短期无明显业务亮点</div>
+  <span class="value low">低</span>
+</div>
+<div class="summary-card">
+  <div class="num">#17</div>
+  <div class="name">赛诺菲（中国）</div>
+  <div class="brief">大中华区总裁谈深化本土创新，流感疫苗入华30年+裁员引关注</div>
+  <span class="value high">高</span>
+</div>
+</div>
+
+<!-- ════ 详细情报 ════ -->
+<div class="detail">
+  <h3>1. 伊顿（中国）投资有限公司 <span class="val-badge high">高价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>IDCE 2026发布新品：6月3日上海国际数据中心展上发布环氧流化绝缘始端母线，四大颠覆性技术突破</li>
+    <li>Grid-to-Chip战略：以“从电网到芯片”为主题展示数据中心供配电整体方案，布局AI时代能源基础设施</li>
+    <li>深度报道：21世纪经济报道6月18日刊发百年电气企业伊顿AI时代数据中心能源底座分析</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">伊顿中国持续招聘电气工程师、数据中心解决方案专家、销售经理等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.21jingji.com/article/20260618/herald/ce7f4c3086d5cf0dff7afad011908b28.html" target="_blank">21世纪经济报道：伊顿AI时代数据中心布局</a></p>
+</div>
+<div class="detail">
+  <h3>2. 思爱普（中国）有限公司 <span class="val-badge high">高价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>SAP中国峰会：6月3-4日北京召开，首次面向中国阐述“自主运营企业”战略，224个AI智能体已嵌入核心业务</li>
+    <li>同济合作：6月12日与同济大学签署合作备忘录，推动产学研融合</li>
+    <li>毕马威合作：毕马威中国携手SAP以云与AI重塑全球运营体系</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">SAP中国持续招聘云计算、AI解决方案顾问、销售经理等岗位，大中华区总部位于上海</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://finance.sina.com.cn/stock/t/2026-06-04/doc-iniafrtt2631673.shtml" target="_blank">新浪财经：224个AI智能体已嵌入SAP核心业务</a></p>
+</div>
+<div class="detail">
+  <h3>3. 上海建科工程咨询有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>东方英才：公司员工黄科锋入选2025年上海市“东方英才计划”青年项目（6月2日公示）</li>
+    <li>深圳处罚：因光明区特殊教育学校项目管理人员未到岗履职被深圳住建局处罚</li>
+    <li>集团动向：上海建科（603153）6月22日召开年度股东大会，6月29日将召开业绩说明会</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">官网持续招聘监理工程师、造价工程师、项目管理等岗位，校园招聘进行中</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="http://finance.sina.com.cn/wm/2026-06-02/doc-inhzzivn3138993.shtml" target="_blank">新浪财经：建科工程咨询员工入选东方英才计划</a></p>
+</div>
+<div class="detail">
+  <h3>4. 欧加隆（上海）医药科技有限公司 <span class="val-badge high">高价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>并购传闻：传印度最大药企太阳制药拟120亿美元收购欧加隆，若达成将是印度药企史上最大海外并购</li>
+    <li>人事变动：傅江安5月加入欧加隆中国，任女性健康事业部销售业务负责人</li>
+    <li>零售深化：进博会期间启动“欧翎先锋·2026零售先锋联盟”，联合多方推动医药零售创新</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">欧加隆中国招聘医药代表、市场经理、医学事务等岗位，上海总部为核心</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.phirda.com/artilce_42250.html" target="_blank">研发客：120亿美元！欧加隆或被印度最大药企收购</a></p>
+</div>
+<div class="detail">
+  <h3>5. 远景动力技术（江苏）有限公司 <span class="val-badge high">高价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>赴港IPO：外电报道远景动力考虑最快今年在港上市，预计集资10-20亿美元</li>
+    <li>储能大单：NEXTES签约2026年起三年内向远景动力采购1.5GWh储能专用电芯</li>
+    <li>银企合作：渤海银行南京分行与远景动力江阴基地开启“金融+科技”绿色发展战略合作</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">全球14大基地持续招聘电池研发、制造工艺、质量管理等岗位，江阴/宜昌为重点</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="http://finance.sina.com.cn/wm/2026-04-17/doc-inhuutza2225612.shtml" target="_blank">新浪财经：远景动力传拟赴香港上市</a></p>
+</div>
+<div class="detail">
+  <h3>6. 益科德（上海）有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>CEO换帅：财务长彼得·舍恩霍费尔接替布赫勒博士出任首席执行官</li>
+    <li>CATL大奖：荣获德国CATL电池片千兆工厂设施钻石合作伙伴奖</li>
+    <li>AI数据中心：在法兰克福附近获得三个AI驱动数据中心项目，支持德国数字化基建</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">招聘工程师（暖通/电气/洁净室）、项目经理、BIM工程师等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.exyte.net/zh-CN" target="_blank">Exyte官网：CEO换帅及最新项目动态</a></p>
+</div>
+<div class="detail">
+  <h3>7. 上海建科咨询集团股份有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>业绩说明会：定于6月29日上午10:00通过网络互动方式召开2025年度暨2026Q1业绩说明会</li>
+    <li>股东大会：6月22日已召开2025年年度股东大会</li>
+    <li>校招进行：2026届春季校园招聘启动（3月），通过前程无忧等平台持续招募</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">集团下属建科院、工程咨询公司等多单位持续招聘工程咨询、设计、检测等人才</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://stockmc.xueqiu.com/202606/603153_20260618_UJJD.pdf" target="_blank">上证公告：上海建科咨询集团2025年度暨2026Q1业绩说明会</a></p>
+</div>
+<div class="detail">
+  <h3>8. 村田（中国）投资有限公司 <span class="val-badge high">高价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>慕尼黑电子展：7月1-3日参展慕尼黑上海电子展，聚焦通信/车载/工业/健康四大领域</li>
+    <li>机器人方案：系统展示面向人形机器人的元器件解决方案，微小元器件驱动数智世界</li>
+    <li>EMC展会：6月25-26日参加深圳EMC China Show 2026电磁兼容展</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">村田中国19个销售据点、7工厂、3研发基地持续招聘电子工程师、销售代表、技术支持等</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.ne-time.cn/web/article/39007" target="_blank">NE时代：村田中国携四大领域创新产品亮相慕尼黑上海电子展</a></p>
+</div>
+<div class="detail">
+  <h3>9. 捷普科技（上海）有限公司 <span class="val-badge high">高价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>业绩超预期：FY2026核心EPS指引$12.70（FactSet预期$12.35），第三财季业绩超预期并上调全年展望</li>
+    <li>投行看好：美国银行上调Jabil目标价，看好AI营收增长前景</li>
+    <li>Q1回顾：FY2026 Q1营收83亿美元+18.74%，超分析师预期</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">捷普中国持续招聘工程、供应链、质量管理等岗位，2026校园招聘已启动</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.moomoo.com/hans/news/post/71663728/guidance-jbl-jabil-expects-fiscal-2026-core-eps-12-70" target="_blank">Moomoo：捷普科技预计FY2026核心EPS $12.70</a></p>
+</div>
+<div class="detail">
+  <h3>10. 上海皓元医药股份有限公司 <span class="val-badge high">高价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>涨停分析：6月18日涨停，原因：核心主业增长（2025营收+26.73%）+ADC赛道布局+海外市场拓展</li>
+    <li>ADC平台：6月18日发布ADC偶联平台核心技术问题解答，彰显技术实力</li>
+    <li>融资活跃：6月18日获融资买入1.66亿元，融资余额6.69亿元，处于较高位</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">研发管线涵盖小分子、ADC大分子，持续招聘药物研发、化学合成、生物分析等科研岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://finance.sina.com.cn/stock/aiassist/ydfx/2026-06-18/doc-inicuyvx5510560.shtml" target="_blank">新浪财经：皓元医药6月18日涨停分析</a></p>
+</div>
+<div class="detail">
+  <h3>11. 浙江天正电气股份有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>股份回购：6月22日首次回购5万股，回购计划总额不超过1304.34万股（价格≤11.50元/股）</li>
+    <li>成本压力：主要原材料铜、银价大幅上涨对公司毛利造成显著压力，美元汇兑损失致财务费用为正</li>
+    <li>股权激励：6月11日完成股权激励限制性股票回购注销实施</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">天正电气及天毅行持续招聘电气工程师、销售工程师、研发人员等</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.nbd.com.cn/articles/2026-06-22/4433072.html" target="_blank">每日经济新闻：天正电气首次回购5万股</a></p>
+</div>
+<div class="detail">
+  <h3>12. 上海朗阁教育科技股份有限公司 <span class="val-badge low">低价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>暑期推广：各地校区（北京、杭州、绵阳等）持续推进雅思/托福/GRE/SAT暑期培训招生</li>
+    <li>留学服务：覆盖近30个城市，涉及国际学校择校、留学申请、语言培训、艺术留学等业务线</li>
+    <li>行业关注：2026年留学趋势报告即将发布，国际教育市场持续回温</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">各城市校区持续招聘雅思/托福教师、课程顾问、留学规划师等</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://mp.sohu.com/profile?xpt=MTc0ODU2RDQ3MDc4RkJFMzJDNUE0N0VEQzk2NzFERTdAcXEuc29odS5jb20=" target="_blank">北京朗阁培训中心搜狐号</a></p>
+</div>
+<div class="detail">
+  <h3>13. 上海罗莱生活科技有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>产业园投产：罗莱智慧产业园2025年一季度逐步落地投产，提升供应链效率</li>
+    <li>机构聚焦：4月23日接受85家机构调研（含保险、基金、海外机构等），市场关注度高</li>
+    <li>年度报告：2025年度报告已于4月23日披露，营收48.39亿+6.13%</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">家纺行业头部企业，持续招聘零售运营、电商运营、产品设计、供应链管理等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://xueqiu.com/S/SZ002293/385510670" target="_blank">雪球：罗莱生活投资者关系活动记录（85家机构调研）</a></p>
+</div>
+<div class="detail">
+  <h3>14. 3M中国有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>市场活跃：6月18日成交额11.12亿美元较前日+82.98%，市场关注度大幅回升</li>
+    <li>AI光连接：推动并扩大面向AI数据中心光连接的新联盟持续扩展成员</li>
+    <li>品牌赛事：世界排名第一高尔夫球手Scottie Scheffler承诺参加2026 3M Open</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">3M中国官网及招聘平台发布研发、销售、市场、制造等岗位，新能源汽车相关岗位增长</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.3m.com.cn/3M/zh_CN/company-cn/press-room" target="_blank">3M中国新闻发布</a></p>
+</div>
+<div class="detail">
+  <h3>15. 仲利国际融资租赁有限公司 <span class="val-badge mid">中价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>校招提名：6月9日荣获智联招聘“2026上海区校招提名奖”，雇主品牌获认可</li>
+    <li>体验大奖：6月2日荣获“2026年度候选人体验大奖”，人才招聘体验优化</li>
+    <li>母公司荣誉：中租控股连续6年入选道琼斯最佳类别指数，首度斩获类别第一（5月27日）</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">仲利国际持续招聘融资租赁业务经理、风控专员、客户经理等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="https://www.bizloan-chailease.com.cn/news/company-news" target="_blank">仲利国际官网：荣获智联招聘2026上海区校招提名奖</a></p>
+</div>
+<div class="detail">
+  <h3>16. 上海振华重工（集团）股份有限公司 <span class="val-badge low">低价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>独董辞任：6月10日公告独立董事陈力辞任，同步发布候选人声明</li>
+    <li>股东大会：6月9日召开2025年年度股东大会</li>
+    <li>定期公告：6月2日发布多项公司治理相关公告，2026Q1报告已于4月28日披露</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">振华重工持续招聘机械工程师、电气工程师、船舶设计、项目管理等岗位</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="http://money.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/600320.phtml" target="_blank">新浪财经：振华重工公司公告汇总</a></p>
+</div>
+<div class="detail">
+  <h3>17. 赛诺菲（中国）投资有限公司 <span class="val-badge high">高价值</span></h3>
+  <div class="label">📰 最新动态</div>
+  <ul>
+    <li>高层发声：6月22日新华网刊发赛诺菲大中华区总裁施旺专访，谈深化本土创新战略</li>
+    <li>里程碑：2026年是赛诺菲三价流感疫苗进入中国30周年、儿童五联疫苗入华15周年</li>
+    <li>裁员动态：据Fierce Biotech报道赛诺菲即将开启裁员，属“全力致胜”战略重组一部分</li>
+  </ul>
+  <div class="label">💼 招聘动态</div>
+  <p style="font-size:14px;">赛诺菲中国拥有3家生产基地和4大研发基地，持续招聘医药代表、临床研究员、市场经理等</p>
+  <div class="label">🔗 信息来源</div>
+  <p class="src"><a href="http://www.news.cn/health/20260622/17832cff966c42eeb5afe1dde7b4e85a/c.html" target="_blank">新华网：赛诺菲大中华区总裁施旺谈深化本土创新</a></p>
+</div>
+
+</body>
+</html>
