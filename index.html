@@ -125,8 +125,8 @@
     </div>
     <div class="sidebar-scroll" id="dateList"></div>
     <div class="sidebar-scroll" style="border-top:1px solid var(--border);padding-top:10px;">
-      <a class="monthly-entry" href="javascript:void(0)" onclick="switchMode('monthly');loadReport('2026-05','monthly')">
-        <span class="icon">📊</span> 查看 5 月月度分析
+      <a class="monthly-entry" href="javascript:void(0)" onclick="switchMode('monthly');loadReport('2026-06','monthly')">
+        <span class="icon">📊</span> 查看 6 月月度分析
       </a>
     </div>
   </nav>
@@ -137,9 +137,12 @@
       <div class="stat">按月份汇总分析</div>
     </div>
     <div class="sidebar-scroll">
-      <a class="date-item active" href="javascript:void(0)" onclick="loadReport('2026-05','monthly')" id="monthly-2026-05">
-        2026年5月<span class="wd">11个情报日</span>
+      <a class="date-item active" href="javascript:void(0)" onclick="loadReport('2026-06','monthly')" id="monthly-2026-06">
+        2026年6月<span class="wd">14个情报日</span>
         <span class="badge">最新</span>
+      </a>
+      <a class="date-item" href="javascript:void(0)" onclick="loadReport('2026-05','monthly')" id="monthly-2026-05">
+        2026年5月<span class="wd">11个情报日</span>
       </a>
     </div>
     <div class="sidebar-scroll" style="border-top:1px solid var(--border);padding-top:10px;">
@@ -163,7 +166,7 @@
 </div>
 
 <script>
-var REPORTS = ["2026-07-01","2026-06-25","2026-06-24","2026-06-23","2026-06-22","2026-06-18","2026-06-17","2026-06-11","2026-06-10","2026-06-08","2026-06-05","2026-06-04","2026-06-03","2026-06-02","2026-06-01","2026-05-29","2026-05-28","2026-05-27","2026-05-26","2026-05-25","2026-05-21","2026-05-20","2026-05-19","2026-05-18","2026-05-12","2026-05-11"];
+var REPORTS = ["2026-07-06","2026-07-02","2026-07-01","2026-06-25","2026-06-24","2026-06-23","2026-06-22","2026-06-18","2026-06-17","2026-06-11","2026-06-10","2026-06-08","2026-06-05","2026-06-04","2026-06-03","2026-06-02","2026-06-01","2026-05-29","2026-05-28","2026-05-27","2026-05-26","2026-05-25","2026-05-21","2026-05-20","2026-05-19","2026-05-18","2026-05-12","2026-05-11"];
 var currentMode = 'daily';
 
 (function() {
