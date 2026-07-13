@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>客户每日情报 - 2026-07-06</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; color:#1a1a2e; line-height:1.6; margin:0; }
+  .header { background:linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%); color:#fff; padding:28px 32px; margin-bottom:24px; }
+  .header h1 { font-size:22px; font-weight:700; margin:0 0 8px; }
+  .header .meta { font-size:13px; opacity:.85; }
+  .header .stats { display:flex; gap:20px; margin-top:12px; font-size:13px; }
+  .header .stats span { background:rgba(255,255,255,.15); padding:3px 14px; border-radius:20px; }
+  
+  .summary-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:14px; margin:0 24px 32px; }
+  .summary-card { background:#fff; border-radius:10px; padding:16px 18px; border:1px solid #e5e7eb; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .summary-card .num { font-size:11px; color:#6b7280; margin-bottom:4px; }
+  .summary-card .name { font-size:15px; font-weight:700; margin-bottom:6px; }
+  .summary-card .brief { font-size:13px; color:#6b7280; line-height:1.5; }
+  .summary-card .value { display:inline-block; margin-top:10px; padding:2px 10px; border-radius:12px; font-size:11px; font-weight:600; }
+  .value.high { background:#ecfdf5; color:#059669; }
+  .value.mid  { background:#fffbeb; color:#d97706; }
+  .value.low  { background:#f3f4f6; color:#6b7280; }
+  
+  .detail { margin:0 24px 28px; background:#fff; border-radius:10px; padding:20px 24px; border:1px solid #e5e7eb; }
+  .detail h3 { font-size:16px; font-weight:700; margin:0 0 12px 0; padding-bottom:8px; border-bottom:2px solid #2563eb; display:flex; align-items:center; gap:8px; }
+  .detail .val-badge { font-size:11px; padding:2px 10px; border-radius:12px; font-weight:600; }
+  .val-badge.high { background:#ecfdf5; color:#059669; }
+  .val-badge.mid  { background:#fffbeb; color:#d97706; }
+  .val-badge.low  { background:#f3f4f6; color:#6b7280; }
+  .detail .label { font-size:12px; font-weight:700; color:#6b7280; margin:10px 0 4px; letter-spacing:.5px; }
+  .detail li { font-size:14px; padding:5px 0; border-bottom:1px solid #f3f4f6; }
+  .detail li:last-child { border-bottom:none; }
+  .detail ul { list-style:none; padding:0; margin:0; }
+  .detail .src { font-size:12px; color:#2563eb; word-break:break-all; }
+  .detail .src a { color:#2563eb; text-decoration:none; }
+  .detail .src a:hover { text-decoration:underline; }
+  .detail p { font-size:14px; color:#374151; margin:4px 0; }
+  
+  .footer { margin:0 24px 32px; padding:16px 20px; background:#f9fafb; border-radius:10px; font-size:12px; color:#6b7280; text-align:center; }
+  .divider { margin:0 24px 32px; border-top:1px solid #e5e7eb; }
+  .section-title { margin:0 24px 16px; font-size:14px; font-weight:700; color:#374151; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📊 客户每日情报报告</h1>
+  <div class="meta">2026-07-06 周一 · TOP17重点客户情报追踪</div>
+  <div class="stats">
+    <span>🔴 高价值 5家</span>
+    <span>🟡 中等 4家</span>
+    <span>🟢 低 8家</span>
+  </div>
+</div>
+
+<!-- ════ 摘要卡片 ════ -->
+<div class="section-title">📋 情报摘要</div>
+<div class="summary-grid">
+
+<div class="summary-card">
+  <div class="num">#1</div>
+  <div class="name">伊顿（中国）</div>
+  <div class="brief">近2周暂无公开动态</div>
+  <span class="value 低">低</span>
+</div>
+<div class="summary-card">
+  <div class="num">#2</div>
+  <div class="name">思爱普 SAP</div>
+  <div class="brief">亚太区换帅+链博会白皮书+毕马威战略合作，在华战略扩张期</div>
+  <span class="value 高">高</span>
+</div>
+<div class="summary-card">
+  <div class="num">#3</div>
+  <div class="name">上海建科工程咨询</div>
+  <div class="brief">近2周暂无公开动态</div>
+  <span class="value 低">低</span>
+</div>
+<div class="summary-card">
+  <div class="num">#4</div>
+  <div class="name">欧加隆（上海）</div>
+  <div class="brief">Sun Pharma以117.5亿美元收购Organon，短期招聘收缩，整合后需关注</div>
+  <span class="value 高">高</span>
+</div>
+<div class="summary-card">
+  <div class="num">#5</div>
+  <div class="name">远景动力</div>
+  <div class="brief">近2周暂无公开动态，业务基本面稳健</div>
+  <span class="value 低">低</span>
+</div>
+<div class="summary-card">
+  <div class="num">#6</div>
+  <div class="name">益科德 Exyte</div>
+  <div class="brief">近2周暂无公开动态，半导体EPC业务基本面稳定</div>
+  <span class="value 低">低</span>
+</div>
+<div class="summary-card">
+  <div class="num">#7</div>
+  <div class="name">上海建科咨询集团</div>
+  <div class="brief">召开股东会+业绩说明会，校招社招双线进行</div>
+  <span class="value 中">中</span>
+</div>
+<div class="summary-card">
+  <div class="num">#8</div>
+  <div class="name">村田（中国）</div>
+  <div class="brief">参展2026慕尼黑上海电子展，在华业务拓展积极</div>
+  <span class="value 中">中</span>
+</div>
+<div class="summary-card">
+  <div class="num">#9</div>
+  <div class="name">捷普科技</div>
+  <div class="brief">60周年大庆+多平台全类型招聘进行中，招聘需求旺盛</div>
+  <span class="value 高">高</span>
+</div>
+<div class="summary-card">
+  <div class="num">#10</div>
+  <div class="name">皓元医药</div>
+  <div class="brief">利润分红+机构密集调研+多岗位持续招聘，业务增长强劲</div>
+  <span class="value 高">高</span>
+</div>
+<div class="summary-card">
+  <div class="num">#11</div>
+  <div class="name">天正电气</div>
+  <div class="brief">连续发布股份回购公告，无业务扩展或招聘信号</div>
+  <span class="value 低">低</span>
+</div>
+<div class="summary-card">
+  <div class="num">#12</div>
+  <div class="name">朗阁教育</div>
+  <div class="brief">近2周暂无公开动态，可能处于业务平稳期</div>
+  <span class="value 低">低</span>
+</div>
+<div class="summary-card">
+  <div class="num">#13</div>
+  <div class="name">罗莱生活</div>
+  <div class="brief">常规融资数据+ESG评级变动，无业务扩展信号</div>
+  <span class="value 低">低</span>
+</div>
+<div class="summary-card">
+  <div class="num">#14</div>
+  <div class="name">3M中国</div>
+  <div class="brief">联合小米、激智科技共建新型显示联合实验室，研发人才需求</div>
+  <span class="value 中">中</span>
+</div>
+<div class="summary-card">
+  <div class="num">#15</div>
+  <div class="name">仲利国际</div>
+  <div class="brief">品牌宣传报道为主，无实质业务变动信号</div>
+  <span class="value 低">低</span>
+</div>
+<div class="summary-card">
+  <div class="num">#16</div>
+  <div class="name">振华重工</div>
+  <div class="brief">买卖合同纠纷+ESG评级下降，偏负面信号</div>
+  <span class="value 低">低</span>
+</div>
+<div class="summary-card">
+  <div class="num">#17</div>
+  <div class="name">赛诺菲（中国）</div>
+  <div class="brief">成都创新中心启用+AI制药布局+杰出雇主六连冠，大规模扩张中</div>
+  <span class="value 高">高</span>
+</div>
+</div>
+
+<div class="divider"></div>
+<div class="section-title">📰 详细情报</div>
+
+<div class="detail">
+  <h3>
+    #1 伊顿（中国）投资有限公司
+    <span class="val-badge 低">低</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>暂无近期公开动态</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>无近期公开的招聘相关新闻</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://www.eaton.com.cn/cn/zh-cn.html" target="_blank">伊顿中国官网</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #2 思爱普（中国）有限公司
+    <span class="val-badge 高">高价值</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>任命 Verena Siow 为亚太区总裁（7月2日），常驻新加坡，亚太区超5万员工</li>
+    <li>四度参展链博会（6月23日），联合贸促会发布《中国企业出海白皮书》，展示AI智能体供应链应用场景</li>
+    <li>毕马威中国与SAP达成战略合作（6月4日），基于SAP Cloud ERP推进全价值链运营升级</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>亚太区管理层变动（新任总裁）通常伴随团队调整。链博会和毕马威合作体现中国市场持续扩张，供应链管理、商业AI、云ERP方向为招聘热点</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://news.sap.cn/feed/" target="_blank">SAP中国新闻中心</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #3 上海建科工程咨询有限公司
+    <span class="val-badge 低">低</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>暂无近期公开动态</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>无近期公开的招聘相关新闻</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://www.baidu.com/s?wd=上海建科工程咨询&tn=news" target="_blank">百度新闻搜索</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #4 欧加隆（上海）医药科技有限公司
+    <span class="val-badge 高">高价值</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>Sun Pharma签署最终协议收购Organon，交易估值117.5亿美元（4月27日公告），预计2027年初完成。合并后将成为全球前25大制药公司</li>
+    <li>收购完成后，Sun Pharma将进入生物类似药领域（全球第7大），女性健康领域将成全球前3</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>在被收购过渡期（预计至2027年初），通常处于招聘冻结或审慎招聘状态。交易完成后整合期将产生新的人才需求（生物类似药、女性健康领域），值得中长期跟踪</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://www.organon.com/news/sun-pharma-signs-definitive-agreement-to-acquire-organon/" target="_blank">Organon官方公告</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #5 远景动力技术（江苏）有限公司
+    <span class="val-badge 低">低</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>暂无近期公开动态，远景科技集团官网近期有更新（2026年4月），但远景动力具体新闻未检索到</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>无近期公开的招聘相关新闻</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://www.envision-group.com/cn/" target="_blank">远景科技集团官网</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #6 益科德（上海）有限公司
+    <span class="val-badge 低">低</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>暂无近期公开动态。Exyte在半导体/高科技厂房建设领域持续运营，企查查页面近期有更新</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>智联招聘和猎聘上有Exyte上海招聘页面，但无近期新增的大规模招聘公告</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://www.exyte.net/" target="_blank">Exyte官网</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #7 上海建科咨询集团股份有限公司
+    <span class="val-badge 中">中等</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>6月23日召开2025年年度股东会，审议通过多项议案</li>
+    <li>6月30日发布2025年度暨2026年Q1业绩说明会召开情况公告</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>2026年春季校园招聘+社会招聘进行中，岗位覆盖工程监理、咨询等方向，在51job、BOSS直聘等平台发布</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://guba.eastmoney.com/list,603153.html" target="_blank">东方财富股吧（上交所公告）</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #8 村田（中国）投资有限公司
+    <span class="val-badge 中">中等</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>7月1-3日参展2026慕尼黑上海电子展（展位N1.300），主题为高性能集成元件</li>
+    <li>MLCC、电感、传感器等产品线在华业务活跃</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>暂无近期公开发布的招聘动态</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://www.murata.com.cn/zh-cn/" target="_blank">村田中国官网</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #9 捷普科技（上海）有限公司
+    <span class="val-badge 高">高价值</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>6月30日举办捷普上海60周年嘉年华活动，庆祝公司成立60周年</li>
+    <li>2026年校园招聘及实习招聘持续进行中，在实习僧、BOSS直聘、猎聘等平台有活跃招聘信息</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>2026年实习+校园招聘+社会招聘全面进行中，猎聘、BOSS直聘、实习僧等平台均有岗位发布，招聘需求旺盛</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://www.jabil.cn/" target="_blank">捷普中国官网</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #10 上海皓元医药股份有限公司
+    <span class="val-badge 高">高价值</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>7月3日发布2025年年度权益分派实施公告，同时调整可转债转股价格</li>
+    <li>6月29日发布投资者关系活动记录表（6月23-26日），接待多家机构调研</li>
+    <li>7月2日发布可转债转股结果暨股份变动公告</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>猎聘、前程无忧、智联招聘等多平台持续招聘，岗位覆盖研发（抗体研发经理/主管）、QC工程师、操作工等</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://guba.eastmoney.com/list,688131.html" target="_blank">东方财富股吧（上交所公告）</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #11 浙江天正电气股份有限公司
+    <span class="val-badge 低">低</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>6月23日-7月2日连续发布股份回购系列公告：首次回购→占总股本1%（6/26）→回购进展（7/1）→占总股本2%（7/2）</li>
+    <li>密集回购显示公司对自身股价有信心，现金流充裕</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>暂无近期公开的招聘动态</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://guba.eastmoney.com/list,605066.html" target="_blank">东方财富股吧（上交所公告）</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #12 上海朗阁教育科技股份有限公司
+    <span class="val-badge 低">低</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>暂无近2周公开新闻动态，搜索结果主要为各地分校页面和过往荣誉</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>暂无近期公开的招聘动态</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://www.longre.com/" target="_blank">朗阁教育官网</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #13 上海罗莱生活科技有限公司
+    <span class="val-badge 低">低</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>7月3日获融资买入827.26万元，当前融资余额1.26亿元，占流通市值1.38%</li>
+    <li>伦交所发布最新ESG评级，罗莱生活获C+级，较上一年B-下降</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>暂无近期招聘相关新闻</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://stock.10jqka.com.cn/20260706/c677963715.shtml" target="_blank">同花顺财经</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #14 3M中国有限公司
+    <span class="val-badge 中">中等</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>7月3日，激智科技联合小米、3M中国三方计划共建新型显示联合实验室，在宁波'2026光电技术产才融合创新研讨会'上公布</li>
+    <li>三方共建实验室将推进新一代光学薄膜技术研发，聚焦新型显示产业链协同创新</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>联合实验室建设可能带动光学、材料方向的研发人才需求</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://stock.10jqka.com.cn/20260704/c677951051.shtml" target="_blank">同花顺财经</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #15 仲利国际融资租赁有限公司
+    <span class="val-badge 低">低</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>6月24日（中小微企业日），界面新闻专题报道'中小微企业日致敬韧性，仲利国际二十一载深耕小微沃土'</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>暂未发现近期招聘相关新闻</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://www.jiemian.com/article/14639695.html" target="_blank">界面新闻</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #16 上海振华重工（集团）股份有限公司
+    <span class="val-badge 低">低</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>天眼查数据显示，振华重工涉及买卖合同纠纷案（案号2026沪0115民初74342号），将于8月12日在浦东新区法院开庭</li>
+    <li>伦交所ESG评级获C级，较上一年C+下降</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>暂未发现近期招聘相关新闻</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://baijiahao.baidu.com/s?id=1869923294098546136" target="_blank">百度百家号</a></div>
+</div>
+<div class="detail">
+  <h3>
+    #17 赛诺菲（中国）投资有限公司
+    <span class="val-badge 高">高价值</span>
+  </h3>
+  
+  <div class="label">📌 最新动态</div>
+  <ul>
+    <li>7月2日，赛诺菲首个中国创新与运营中心成都办公场地正式启用，该中心于2026年3月成立</li>
+    <li>赛诺菲、礼来等全球大药企连续背书AI制药，预计2026-2028年将加速AI团队搭建和外部平台采购</li>
+    <li>连续六年荣登'中国杰出雇主'榜首，显示在中国市场持续的人才投入</li>
+  </ul>
+  
+  <div class="label">💼 招聘动态</div>
+  <p>成都创新与运营中心新址启用，预计将带来研发、数字化运营、AI制药等方向的大规模人才招聘需求，是高优先级跟进目标</p>
+  
+  <div class="label">🔗 来源</div>
+  <div class="src"><a href="https://baijiahao.baidu.com/s?id=1869702681691414986" target="_blank">百度百家号</a></div>
+</div>
+<div class="footer">
+  🕐 报告生成时间：2026-07-06 11:00 CST · TOP17重点客户 · 自动情报追踪系统<br>
+  ⚠️ 部分非上市公司公开新闻较少，建议结合51job后台招聘岗位发布情况获取更精准活跃度信号
+</div>
+
+</body>
+</html>
