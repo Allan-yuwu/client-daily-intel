@@ -168,7 +168,10 @@
     </div>
     <div class="sidebar-scroll" id="dateList"></div>
     <div class="sidebar-scroll" style="border-top:1px solid var(--border);padding-top:10px;">
-      <a class="monthly-entry" href="javascript:void(0)" onclick="switchMode('monthly');loadReport('2026-06','monthly')">
+      <a class="monthly-entry" href="javascript:void(0)" onclick="switchMode('monthly');loadReport('2026-07','monthly')">
+        <span class="icon">↗</span> 查看 7 月月度分析
+      </a>
+      <a class="monthly-entry" href="javascript:void(0)" onclick="switchMode('monthly');loadReport('2026-06','monthly')" style="margin-top:6px;">
         <span class="icon">↗</span> 查看 6 月月度分析
       </a>
       <a class="monthly-entry" href="javascript:void(0)" onclick="switchMode('monthly');loadReport('2026-05','monthly')" style="margin-top:6px;">
@@ -183,9 +186,12 @@
       <div class="stat">按月份汇总分析</div>
     </div>
     <div class="sidebar-scroll">
-      <a class="date-item active" href="javascript:void(0)" onclick="loadReport('2026-06','monthly')" id="monthly-2026-06">
-        2026年6月<span class="wd">14个情报日</span>
+      <a class="date-item active" href="javascript:void(0)" onclick="loadReport('2026-07','monthly')" id="monthly-2026-07">
+        2026年7月<span class="wd">7个情报日 · 补录</span>
         <span class="badge">最新</span>
+      </a>
+      <a class="date-item" href="javascript:void(0)" onclick="loadReport('2026-06','monthly')" id="monthly-2026-06">
+        2026年6月<span class="wd">14个情报日</span>
       </a>
       <a class="date-item" href="javascript:void(0)" onclick="loadReport('2026-05','monthly')" id="monthly-2026-05">
         2026年5月<span class="wd">11个情报日</span>
@@ -229,7 +235,7 @@ function switchMode(mode) {
   if (mode === 'daily' && REPORTS.length > 0) {
     loadReport(REPORTS[0], 'daily');
   } else if (mode === 'monthly') {
-    loadReport('2026-05', 'monthly');
+    loadReport('2026-07', 'monthly');
   }
 }
 
