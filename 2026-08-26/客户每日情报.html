@@ -9,12 +9,36 @@
 .summary{grid-template-columns:repeat(4,110px)}
 @media(max-width:1100px){.hero{grid-template-columns:1fr}.summary{grid-template-columns:repeat(4,1fr)}.grid{grid-template-columns:1fr}}
 @media(max-width:620px){.summary{grid-template-columns:1fr 1fr}}
+/* V3 visual direction */
+body{background:#eeefeb;color:#17231f}
+.wrap{width:min(1580px,calc(100% - 36px));padding-top:20px}
+.hero{position:relative;overflow:hidden;border:0;background:linear-gradient(128deg,#102b25 0%,#173d34 72%,#205044 100%);color:#f8f5ed;box-shadow:0 24px 60px rgba(16,43,37,.2)}
+.hero:after{content:"";position:absolute;right:-80px;top:-150px;width:360px;height:360px;border:1px solid rgba(255,255,255,.12);border-radius:50%;box-shadow:0 0 0 58px rgba(255,255,255,.035),0 0 0 118px rgba(255,255,255,.025)}
+.hero>div{position:relative;z-index:1}.kicker{color:#a8dcc3}.hero h1{font-size:32px;letter-spacing:-.035em}.hero p{color:rgba(248,245,237,.68)}
+.metric{border-color:rgba(255,255,255,.14);background:rgba(255,255,255,.08);backdrop-filter:blur(10px)}.metric strong{color:#fff}.metric span{color:rgba(248,245,237,.64)}
+.legend{margin-top:16px}.pill{background:rgba(255,255,255,.72);border-color:#d8dfdb;color:#50615a}
+.card{border-color:#d9dfdc;border-radius:18px;box-shadow:0 12px 32px rgba(30,50,43,.055)}
+.brief{display:grid;grid-template-columns:105px minmax(0,1fr) auto;align-items:center;gap:18px;margin:16px 0;padding:14px 18px;border:1px solid #d8dfdb;border-radius:14px;background:rgba(255,255,255,.78);box-shadow:0 8px 24px rgba(30,50,43,.04)}
+.brief-label{color:#0a6d52;font-size:11px;font-weight:850;letter-spacing:.12em}.brief p{margin:0;color:#3f514a;font-size:13px}.brief strong{padding:5px 10px;border-radius:999px;background:#e2f3eb;color:#087052;font-size:11px;white-space:nowrap}
+.toolbar{position:sticky;top:10px;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px;padding:10px;border:1px solid rgba(205,215,210,.9);border-radius:15px;background:rgba(249,250,248,.9);box-shadow:0 10px 28px rgba(30,50,43,.08);backdrop-filter:blur(14px)}
+.search{display:flex;align-items:center;gap:9px;min-width:260px;padding:0 12px;border:1px solid #d5ddd9;border-radius:10px;background:#fff;color:#87938e}.search input{width:100%;height:36px;border:0;outline:0;background:transparent;color:#20322b;font:inherit}.search input::placeholder{color:#9ba6a1}
+.filters{display:flex;flex-wrap:wrap;gap:6px}.filter{height:36px;padding:0 13px;border:1px solid transparent;border-radius:9px;background:transparent;color:#5f6f68;font-size:12px;font-weight:700;cursor:pointer}.filter:hover{background:#edf2ef}.filter.active{border-color:#c6d8d0;background:#dcebe4;color:#0b674f;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+.shown{padding:0 8px;color:#79877f;font-size:11px;white-space:nowrap}
+.card{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.card:hover{transform:translateY(-2px);border-color:#bdcec6;box-shadow:0 18px 40px rgba(30,50,43,.09)}
+.card-head{padding:19px 20px;background:linear-gradient(180deg,#fff,#fbfcfb)}.rank{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:23px;padding:0 7px;border-radius:7px;background:#e3f0ea;color:#0a6d52}.kind{border:1px solid #e0e6e3;background:#f7f8f7;color:#6c7973}
+.section{grid-template-columns:112px minmax(0,1fr);padding:16px 20px}.section-title{color:#43534c;letter-spacing:.02em}.section-title i{box-shadow:0 0 0 4px rgba(37,99,235,.08)}.section.hr .section-title i{box-shadow:0 0 0 4px rgba(181,71,8,.09)}.section.jobs .section-title i{box-shadow:0 0 0 4px rgba(8,127,91,.09)}
+.job-table{border:1px solid #e7ece9;border-radius:11px;border-collapse:separate;border-spacing:0;overflow:hidden}.job-table tr:first-child th,.job-table tr:first-child td{border-top:0}.job-table th{background:#fafbfa}.job-table tr:hover td,.job-table tr:hover th{background:#f7faf8}
+.empty-result{display:none;grid-column:1/-1;padding:60px 24px;border:1px dashed #c9d3ce;border-radius:16px;background:rgba(255,255,255,.55);color:#78867f;text-align:center}
+@media(max-width:820px){.toolbar{position:static;align-items:stretch;flex-direction:column}.search{min-width:0}.filters{overflow-x:auto;flex-wrap:nowrap}.filter{flex:none}.shown{display:none}.brief{grid-template-columns:1fr}.brief strong{justify-self:start}}
+@media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 </style>
 </head>
 <body><main class="wrap">
-<header class="hero"><div><p class="kicker">CLIENT DAILY INTELLIGENCE · V2</p><h1>客户每日情报｜2026-08-26</h1><p>每位客户固定展示：公司资讯、HR项目、职位变化。职位失败与未映射不会记作 0。</p></div><div class="summary"><div class="metric"><strong>17</strong><span>监控客户</span></div><div class="metric"><strong>2</strong><span>成功职位基线</span></div><div class="metric"><strong>8</strong><span>采集失败渠道</span></div><div class="metric"><strong>41</strong><span>待映射渠道</span></div></div></header>
-<div class="legend"><span class="pill">● 公司资讯</span><span class="pill">● HR项目</span><span class="pill">● 51job / 猎聘 / 智联</span><span class="pill">首次基线后按“上次成功采集”比较</span></div>
-<section class="grid" id="cards"></section>
+<header class="hero"><div><p class="kicker">CLIENT DAILY INTELLIGENCE · V3</p><h1>客户每日情报｜2026-08-26</h1><p>公司动态、人才项目与招聘渠道变化，在一张客户卡片中完成判断。</p></div><div class="summary"><div class="metric"><strong>17</strong><span>监控客户</span></div><div class="metric"><strong>2</strong><span>成功职位基线</span></div><div class="metric"><strong>8</strong><span>采集失败渠道</span></div><div class="metric"><strong>41</strong><span>待映射渠道</span></div></div></header>
+<section class="brief"><div class="brief-label">TODAY'S FOCUS</div><p>SAP学生日、美团校招、欧加隆HR岗位、中微半年报与鹰角2027秋招，构成今天最值得跟进的五条线索。</p><strong>5 条可核验信号</strong></section>
+<div class="legend"><span class="pill">蓝 · 公司资讯</span><span class="pill">橙 · HR项目</span><span class="pill">绿 · 职位变化</span><span class="pill">按上次成功采集比较</span></div>
+<section class="toolbar" aria-label="客户筛选"><label class="search"><span aria-hidden="true">⌕</span><input id="clientSearch" type="search" placeholder="搜索客户名称" autocomplete="off"></label><div class="filters" role="group" aria-label="状态筛选"><button class="filter active" data-filter="all">全部客户</button><button class="filter" data-filter="intel">有新增线索</button><button class="filter" data-filter="ok">有职位基线</button><button class="filter" data-filter="failed">采集失败</button><button class="filter" data-filter="unmapped">全部未映射</button></div><span class="shown" id="shownCount">显示 17 家</span></section>
+<section class="grid" id="cards"><div class="empty-result" id="emptyResult">没有符合当前条件的客户</div></section>
 <p class="footer">口径：平台数字仅代表采集时的公开页面展示，不代表客户全部实际招聘需求；页面失败写“采集失败”，没有准确企业页写“尚未映射”。</p>
 </main>
 <script>
@@ -40,5 +64,9 @@ const data=[
 ];
 function intel(x,type){if(!x)return '<p class="none">暂无新增可靠公开信息；公众号信息未完成核验。</p>';const [v,t,d,u]=x;return `<p><span class="value ${v==='高'?'high':'medium'}">${v}</span><a href="${u}" target="_blank" rel="noreferrer">${t}</a></p><p>${d}</p>`}
 function jobs(rows){return `<table class="job-table"><tbody>${rows.map(([p,s,v,n,u])=>`<tr><th>${p}</th><td>${u?`<a href="${u}" target="_blank" rel="noreferrer">`:''}<span class="status ${s}">${s==='ok'?'已采集':s==='failed'?'采集失败':'尚未映射'}</span>${u?'</a>':''} ${s==='ok'?`<span class="count">${v}</span>`:`${v}`}${n?`<p class="note">${n}</p>`:''}</td></tr>`).join('')}</tbody></table>`}
-document.querySelector('#cards').innerHTML=data.map(c=>`<article class="card"><header class="card-head"><div><span class="rank">#${c.n}</span><h2>${c.name}</h2></div><span class="kind">${c.kind}</span></header><div class="section"><div class="section-title"><i></i>公司资讯</div><div class="content">${c.corp?intel(c.corp):'<p class="none">暂无新增可靠公开信息。</p>'}</div></div><div class="section hr"><div class="section-title"><i></i>HR项目</div><div class="content">${c.hr?intel(c.hr):'<p class="none">暂无可确认新增；公众号信息未完成核验。</p>'}</div></div><div class="section jobs"><div class="section-title"><i></i>职位变化</div><div class="content">${jobs(c.j)}</div></div></article>`).join('');
+const cards=data.map(c=>{const state=c.j.some(x=>x[1]==='ok')?'ok':c.j.some(x=>x[1]==='failed')?'failed':'unmapped';const intelState=(c.corp||c.hr)?'yes':'no';return `<article class="card" data-name="${c.name}" data-state="${state}" data-intel="${intelState}"><header class="card-head"><div><span class="rank">#${c.n}</span><h2>${c.name}</h2></div><span class="kind">${c.kind}</span></header><div class="section"><div class="section-title"><i></i>公司资讯</div><div class="content">${c.corp?intel(c.corp):'<p class="none">暂无新增可靠公开信息。</p>'}</div></div><div class="section hr"><div class="section-title"><i></i>HR项目</div><div class="content">${c.hr?intel(c.hr):'<p class="none">暂无可确认新增；公众号信息未完成核验。</p>'}</div></div><div class="section jobs"><div class="section-title"><i></i>职位变化</div><div class="content">${jobs(c.j)}</div></div></article>`}).join('');
+const grid=document.querySelector('#cards');grid.insertAdjacentHTML('beforeend',cards);
+let activeFilter='all';const search=document.querySelector('#clientSearch');const buttons=[...document.querySelectorAll('.filter')];
+function applyFilter(){const q=search.value.trim().toLowerCase();let shown=0;document.querySelectorAll('.card').forEach(card=>{const matchName=!q||card.dataset.name.toLowerCase().includes(q);const matchFilter=activeFilter==='all'||(activeFilter==='intel'&&card.dataset.intel==='yes')||card.dataset.state===activeFilter;const visible=matchName&&matchFilter;card.hidden=!visible;if(visible)shown++});document.querySelector('#shownCount').textContent=`显示 ${shown} 家`;document.querySelector('#emptyResult').style.display=shown?'none':'block'}
+buttons.forEach(btn=>btn.addEventListener('click',()=>{buttons.forEach(x=>x.classList.remove('active'));btn.classList.add('active');activeFilter=btn.dataset.filter;applyFilter()}));search.addEventListener('input',applyFilter);
 </script></body></html>
